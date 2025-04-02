@@ -1,4 +1,9 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router";
+import 'bootstrap/dist/css/bootstrap.min.css';  
+import "bootstrap/dist/js/bootstrap.min.js";
+
+import Escolha from "./pages/Escolha";
 
 const App = () => {
   return (
@@ -7,9 +12,8 @@ const App = () => {
 
       <main className="flex-grow-1 d-flex flex-column">
       <Routes>
-        <Route>
+        <Route path="/escolha" element={<Escolha/>} />
 
-        </Route>
       </Routes>
       </main>
 
