@@ -1,0 +1,19 @@
+header {
+    height: 55px; /* Aumenta a altura do header */
+    background-color: var(--pastel-orange-800); /* Use a variável de cor ou substitua pela cor desejada */
+  }
+
+.logo {
+    width: 150px;
+    height: 30px;
+    border:1px solid var(--pastel-orange-1000)!important;
+  background-color: var(--pastel-pink-100);
+  }
+
+  .logo p {
+    font-family: var(--font-family-primary);
+    font-weight: bold; 
+    color: var(--pastel-orange-1000)
+  }
+
+  
