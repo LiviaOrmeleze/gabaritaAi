@@ -7,4 +7,26 @@
 
 body {
     font-family: var(--font-family-primary);
+    background: var(--pastel-orange-100)!important;
   }
+
+
+
+.header {
+    background: var(--pastel-orange-900);
+}
+
+.logoFonte {
+    font-family: var(--font-family-primary);
+    color: var(--pastel-orange-1000);
+  
+}
+
+.bgLogo{
+    background: var(--pastel-orange-200);
+    border: 1px solid var(--pastel-orange-1000);
+}
+
+.bg{
+    background: var(--pastel-orange-200) !important;
+}
