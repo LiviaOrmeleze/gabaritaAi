@@ -3,10 +3,12 @@
 /* Aplicar a fonte globalmente */
 :root {
     --font-family-primary: 'Quicksand', sans-serif;
+
+
 }
 
 body {
-    font-family: var(--font-family-primary);
+    font-family: var(--font-family-primary) !important;
     background: var(--pastel-orange-100)!important;
   }
 
@@ -17,10 +19,36 @@ body {
 }
 
 .logoFonte {
-    font-family: var(--font-family-primary);
     color: var(--pastel-orange-1000);
   
 }
+
+.blocoVesti {
+    background: var(--pastel-pink-90);
+    border-radius: 20px 8px 20px 8px;
+    box-shadow: 4px 4px 0px 0px #a33d2f;
+    width: 220px;
+}
+
+.blocoCon {
+    background: var(--pastel-pink-90);
+    border-radius: 20px 8px 20px 8px;
+    box-shadow: 4px 4px 0px 0px #006d77;
+    width: 220px;
+}
+
+.blocoAtua {
+    background: var(--pastel-pink-90);
+    border-radius: 20px 8px 20px 8px;
+    box-shadow: 4px 4px 0px 0px #002147;
+    width: 220px;
+}
+
+.btnCome{
+    background: var(--pastel-orange-1000) !important;
+    
+}
+
 
 .bgLogo{
     background: var(--pastel-orange-200);
