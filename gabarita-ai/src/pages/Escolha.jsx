@@ -4,25 +4,27 @@ import Notaalta from '../assets/notaalta.jpg';
 
 const Escolha = () => {
   return (
-    <div className='h-100 d-flex'>
+<div className='d-flex'>
 
       {/* LADO ESQUERDO */}
       <div className='fundoesquerdo col-6 d-flex flex-column align-items-center '>
 
         <img className='w-75 h-75 rounded-4 img-fluid' src={Notaalta} alt="" />
-        <div className='oqvcp p-3 rounded-4 w-50 mb-4 translate-middle-y'>
-          <h3 className='subtitulo'>O que você procura?</h3>
-          <p className="p-1 fs-6 d-flex text-wrap text-light">
-            No nosso site, você escolhe o modo de estudo ideal para seu objetivo, com cronogramas flexíveis, simulados, videoaulas e acompanhamento personalizado.
-          </p>
-        </div>
+        <div className='oqvcp p-3 rounded-4 w-50 mb-4 translate-middle-y d-flex justify-content-center align-items-center flex-column text-center'>
+        <h3 className='subtitulo'>O que você procura?</h3>
+        <p className="p-1 fs-6 d-flex text-wrap text-light">
+           No nosso site, você escolhe o modo de estudo ideal para seu objetivo, com cronogramas flexíveis, simulados, videoaulas e acompanhamento personalizado.
+        </p>
+      </div>
+
 
       </div>
 
       {/* LADO DIREITO */}
-      <div className='fundodireito col-6'>
 
-          <div className='container d-flex align-items-center'>
+      <div className='fundodireito col-6 '>
+
+          <div className='d-flex justify-content-center align-items-center'>
             <div className='conteudo p-3 text-wrap w-50'>
               <h3>Vestibular</h3>
               <p>
@@ -32,7 +34,7 @@ const Escolha = () => {
             <img className='w-25 h-25 rounded-4' src={Vestibulanda} alt="" />
           </div>
 
-          <div className='container d-flex align-items-center'>
+          <div className='d-flex justify-content-center align-items-center'>
             <img className='w-25 h-25 rounded-4' src={Concurseiro} alt="" />
             <div className='conteudo p-3 text-wrap w-50'>
               <h3>Concurseiro público</h3>
