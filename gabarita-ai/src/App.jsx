@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.min.js";
 
 import Escolha from "./pages/Escolha";
+import Conheca from "./pages/Conheca";
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
       <main className="flex-grow-1 d-flex flex-column">
       <Routes>
         <Route path="/escolha" element={<Escolha/>} />
-
+        <Route path="/conhecanossosite" element={<Conheca/>} />
       </Routes>
       </main>
 
