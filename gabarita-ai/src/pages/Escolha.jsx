@@ -7,7 +7,7 @@ const Escolha = () => {
 <div className='d-flex'>
 
       {/* LADO ESQUERDO */}
-      <div className='fundoesquerdo col-6 d-flex flex-column align-items-center '>
+      <div className='fundoesquerdo col-6 d-flex flex-column align-items-center'>
 
         <img className='w-75 h-75 rounded-4 img-fluid' src={Notaalta} alt="" />
         <div className='oqvcp p-3 rounded-4 w-50 mb-4 translate-middle-y d-flex justify-content-center align-items-center flex-column text-center'>
@@ -22,7 +22,7 @@ const Escolha = () => {
 
       {/* LADO DIREITO */}
 
-      <div className='fundodireito col-6 '>
+      <div className='fundodireito'>
 
           <div className='d-flex justify-content-center align-items-center'>
             <div className='conteudo p-3 text-wrap w-50'>

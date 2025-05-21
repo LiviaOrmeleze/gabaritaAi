@@ -3,13 +3,11 @@ import React from 'react'
 import folha from '../assets/folha.png'
 import logo from '../assets/logo.png'
 import estrela from '../assets/estrela.png'
-import caixabranca from '../assets/caixabranca.png'
-import caixabege from '../assets/caixabege.png'
 
 const Conheca = () => {
   return (
-    <div className='body d-flex'>
-{/*       
+    <div className='fundoconheca body d-flex'>
+      
       <div className='col-6 d-flex align-items-center flex-column'>
 
       <img className='position-relative' src={folha} alt="" />
@@ -26,9 +24,9 @@ const Conheca = () => {
       </div>
       </div>
 
-      </div> */}
+      </div>
 
-      <div className='col-6 d-flex'>
+     {/* <div className='col-6 d-flex'>
 
         <img height={300} width={300} src={caixabranca} alt="" className='position-relative' />
         <div className='position-absolute col-3 p-md-5 text-center'>
@@ -36,7 +34,7 @@ const Conheca = () => {
         <p>Para avaliar suas habilidades nas principais disciplinas e identificar os tópicos que precisam de mais atenção. Aqui, você terá uma visão clara do seu desempenho!</p>
         </div>
 
-       </div>
+       </div> */} 
 
 </div>
   )
