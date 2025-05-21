@@ -5,6 +5,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
 
 import Escolha from "./pages/Escolha";
 import Conheca from "./pages/Conheca";
+import SaibaMais from "./pages/SaibaMais";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Routes>
         <Route path="/escolha" element={<Escolha/>} />
         <Route path="/conhecanossosite" element={<Conheca/>} />
+        <Route path="/saibamais" element={<SaibaMais/>} />
       </Routes>
       </main>
 

@@ -21,6 +21,23 @@
     color: #4e342e;
 }
 
+.font-open-sans-bold {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700; /* Bold */
+  }
+  
+.bgsaibamais{
+    background-color: #df6d14;
+}
+
+.botaosaibamais{
+    background-color: #077d61;
+}
+
+
+
+
+
 body {
     font-family: 'Quicksand', sans-serif;
     background-color: #002147!important;
@@ -34,4 +51,3 @@ body {
     transform: rotate(-30deg); /* Inclina o texto */
     display: inline-block;     /* Necessário para rotacionar corretamente */
   }
-  
