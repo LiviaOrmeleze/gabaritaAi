@@ -1,22 +1,24 @@
-import "./App.css";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router";
+import Login from "./pages/Login";
+import Cadastro from "./pages/Cadastro";
+import Estudar from "./pages/Estudar";
+import Planos from "./pages/Planos";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   return (
-    <div className="d-flex flex-column min-vh-100 m-0 p-0">
-      <BrowserRouter>
+    <BrowserRouter>
+      <div className="d-flex flex-column min-vh-100">
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/cadastro" element={<Cadastro />} />
+          <Route path="/estudar" element={<Estudar />} />
+          <Route path="/planos" element={<Planos />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
+};
 
-      <main className="flex-grow-1 d-flex flex-column">
-      <Routes>
-        <Route>
-
-        </Route>
-      </Routes>
-      </main>
-
-      
-      </BrowserRouter>
-    </div>
-  )
-}
-
-export default App
+export default App;
