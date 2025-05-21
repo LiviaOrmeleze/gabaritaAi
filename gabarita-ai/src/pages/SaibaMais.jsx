@@ -5,7 +5,7 @@ import celular from "../assets/celular.png";
 
 const SaibaMais = () => {
   return (
-    <div className='bgsaibamais text-light d-flex align-items-center justify-content-between vh-100 overflow-hidden' style={{ overflow: 'hidden' }}>
+    <div className='bgsaibamais vh-100 text-light d-flex align-items-center justify-content-between vh-100 overflow-hidden' >
       
       <div className='col-6 ms-5 p-5'>
         <div className='d-flex gap-2 px-0'>

@@ -6,15 +6,15 @@ import estrela from '../assets/estrela.png'
 
 const Conheca = () => {
   return (
-    <div className='fundoconheca body d-flex'>
+    <div className='fundoconheca body  d-flex align-items-center justify-content-between vh-100 overflow-hidden'>
       
       <div className='col-6 d-flex align-items-center flex-column'>
 
       <img className='position-relative' src={folha} alt="" />
-      <div className='position-absolute'>
 
+      <div className='position-absolute m-5 p-5 '>
       <h1 className='tituloconheca'>Conheça nosso site</h1> 
-      <p className='body'>Siga o passo a passo, monte seu perfil e inicie seu processo de estudos</p>
+      <p className='body mt-5'>Siga o passo a passo, monte seu perfil e inicie seu processo de estudos</p>
       <img className='w-25 h-25' src={logo} alt="" />
 
 
