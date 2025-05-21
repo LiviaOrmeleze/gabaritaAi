@@ -1,20 +1,25 @@
 import React from 'react'
+import raposa from "../../assets/raposa.png"
 
-const Header = (props) => {
+const Header = () => {
   return (
-    <header className='w-100 navbar justify-align-content-end align-items-center header'> 
-    <div className="d-flex m-2 align-items-center rounded-5 bgLogo"> 
-      <img className='object-fit-cover'
-      width={50}
-      height={50}
-      src={props.logo} alt="" />
-      <p className='align-items-center m-1 fw-bold justify-content-end logoFonte '>Gabarita.Ai</p>
+    <header className='w-100 navbar d-flex justify-content-between align-items-center header fixed-top '> 
+    <div className="d-flex align-items-center ms-4 bgLogo rounded-5 "> 
+    <img 
+    className='object-fit ms-2'
+    height={25}
+    width={25}
+    src={raposa} 
+    alt="" />
+      <p className=' m-2 fw-bold  logoFonte '>Gabarita.Ai</p>
     </div>
-    <div className="d-flex justify-content-end align-items-center gap-2 logoFonte">
-      <button className="rounded-5 bgLogo me-2">Cadastro</button>
-      <button className=" rounded-5 bgLogo me-5">Login</button>
+    <div className="d-flex justify-content-end align-items-center gap-4 me-4">
+      <button className="rounded-5 bgLogo p-2">Cadastro</button>
+      <button className=" rounded-5 bgLogo p-2">Login</button>
     </div>
     </header>
+
+    
   )
 }
 

@@ -8,6 +8,8 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
     font-family: var(--font-family-primary) !important;
     background: var(--pastel-orange-100)!important;
   }
@@ -18,10 +20,6 @@ body {
     background: var(--pastel-orange-900);
 }
 
-.logoFonte {
-    color: var(--pastel-orange-1000);
-  
-}
 
 .blocoVesti {
     background: var(--pastel-pink-90);
