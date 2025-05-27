@@ -9,11 +9,11 @@ const Escolha = () => {
       {/* LADO ESQUERDO */}
       <div className='fundoesquerdo col-6 d-flex flex-column align-items-center p-5'>
 
-        <img className='w-75 h-75 rounded-4 img-fluid' src={Notaalta} alt="" />
+        <img className='w-75 h-75 rounded-4 img-fluid mt-5' src={Notaalta} alt="" />
         
-        <div className='oqvcp p-3 rounded-4 w-50 mb-4 translate-middle-y d-flex justify-content-center align-items-center flex-column text-center'>
+        <div className='oqvcp p-3 rounded-4 w-50 mb-4 translate-middle d-flex justify-content-center align-items-center flex-column text-center'>
           <h3 className='subtitulo'>O que você procura?</h3>
-          <p className="p-1 fs-6 d-flex text-wrap text-light">
+          <p className="py-1 fs-6 d-flex text-wrap text-light">
             No nosso site, você escolhe o modo de estudo ideal para seu objetivo, com cronogramas flexíveis, simulados, videoaulas e acompanhamento personalizado.
           </p>
         </div>
@@ -21,9 +21,10 @@ const Escolha = () => {
       </div>
 
       {/* LADO DIREITO */}
-      <div className='fundodireito p-5 '>
-
-        <div className='d-flex justify-content-center align-items-center '>
+      <div className='fundodireito'>
+          
+          
+        <div className='d-flex justify-content-center mt-5 py-5'>
           <div className='conteudo p-3 text-wrap w-50'>
             <h3>Vestibular</h3>
             <p>
@@ -33,7 +34,7 @@ const Escolha = () => {
           <img className='w-25 h-25 rounded-4' src={Vestibulanda} alt="" />
         </div>
 
-        <div className='d-flex justify-content-center align-items-center'>
+        <div className='d-flex justify-content-center mt-5 py-5'>
           <img className='w-25 h-25 rounded-4' src={Concurseiro} alt="" />
           <div className='conteudo p-3 text-wrap w-50'>
             <h3>Concurseiro público</h3>

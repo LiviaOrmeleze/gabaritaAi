@@ -6,6 +6,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import Escolha from "./pages/Escolha";
 import Conheca from "./pages/Conheca";
 import SaibaMais from "./pages/SaibaMais";
+import Conhecendo from "./components/Conhecendo";
 
 const App = () => {
   return (
