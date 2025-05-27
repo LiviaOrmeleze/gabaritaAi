@@ -5,9 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Header from "./component/header/Header";
-
-
 import "./scss/styles.scss";
+import Dicionario from "./pages/Dicionario";
 
 const App = () => {
   return (
@@ -17,6 +16,7 @@ const App = () => {
       <main className="flex-grow-1 d-flex flex-column">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/Dicionario" element={<Dicionario/>}/>
         </Routes>
       </main>
     </BrowserRouter>

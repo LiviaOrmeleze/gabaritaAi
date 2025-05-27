@@ -3,6 +3,7 @@
 /* Aplicar a fonte globalmente */
 :root {
     --font-family-primary: 'Quicksand', sans-serif;
+    --font-family-secondary:'Open Sans', sans-serif;
 
 
 }
@@ -60,4 +61,10 @@ body {
 
 .bg{
     background: var(--pastel-orange-200) !important;
+}
+
+.fonteGaba{
+    font-family: var(--font-family-secondary) !important;
+    font-weight: 700;
+    color: var(--pastel-orange-900);
 }
