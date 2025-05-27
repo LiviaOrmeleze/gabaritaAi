@@ -28,29 +28,38 @@ const Home = () => {
         Comece seu estudos <i class="bi bi-caret-right text-light"></i>
       </button>
 
-      <div className="position-absolute end-0 m-3 mt-5" >
-      <img
-        className="object-fit "
-        height={200}
-        width={650}
-        src={banner}
-        alt=""
-      />
-      <p className="position-absolute top-50 start-50 translate-middle fw-bold fs-3">
-      Gabarita.ai</p>
-      <p className="position-absolute top-50 start-50 fs-4">
-         a chave para a sua aprovação está aqui !</p>
+      <div className="position-absolute top-0 end-0 mt-5 me-3">
+       {/* Banner com texto sobreposto */}
+       <div className="position-relative d-inline-block m-3" style={{ width: "650px", height: "200px" }}>
+        <img
+          className="img-fluid rounded-5 w-100 h-100"
+          src={banner}
+          alt="Banner"
+          style={{ objectFit: "cover" }}
+        />
+        {/* Texto sobre o banner */}
+        <div className="position-absolute top-50 start-50 translate-middle text-center">
+          <p className="fw-bold fs-3 m-0">Gabarita.ai</p>
+          <p className="fs-4 m-0">A chave para a sua aprovação está aqui!</p>
+        </div>
       </div>
 
-      <div className="">
-      <img 
-      className="object-fit end-0 "
-      src={quadro} 
-      alt=""
-      height={200} 
-      width={280}
-      />
-      <p> "Sabia que estudar por 25 minutos e fazer pausas curtas melhora a retenção de informações?"</p>
+      {/* Quadro com texto sobreposto */}
+      <div className="position-relative d-inline-block m-3 mt-5" style={{ width: "280px", height: "200px" }}>
+        <img
+          className="img-fluid"
+          src={quadro}
+          alt="Quadro"
+          style={{ objectFit: "cover" }}
+        />
+        {/* Texto sobre o quadro */}
+        <div className="position-absolute top-50 start-50 translate-middle text-center text-dark" style={{ width: "90%" }}>
+          <p className="fs-5 m-0">
+            "Sabia que estudar por 25 minutos e fazer pausas curtas melhora a
+            retenção de informações?"
+          </p>
+        </div>
+      </div>
       </div>
 
     </>

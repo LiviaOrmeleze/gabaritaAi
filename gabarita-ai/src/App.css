@@ -15,6 +15,11 @@ body {
   }
 
 
+ .container {
+    position: relative;
+    width: fit-content;
+    display: inline-block;
+  }
 
 .header {
     background: var(--pastel-orange-900);
