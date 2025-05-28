@@ -37,8 +37,8 @@ const Conhecendo = () => {
 );
 
 return (
-    <div id="cardConheca" className="container w-75 my-5">
-      <div id="informacoes" className="d-flex flex-column ms-md-5 ps-md-3 gap-4">
+    <div id="cardConheca" >
+      <div id="informacoes" >
         {informacoes.map((info) => (
           <CardConheca
             key={info.id}
