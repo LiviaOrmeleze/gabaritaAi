@@ -7,6 +7,7 @@ const SaibaMais = () => {
   return (
     <div className='bgsaibamais min-vh-100 text-light d-flex flex-column flex-md-row align-items-center justify-content-between overflow-hidden'>
       
+
       <div className='col-12 col-md-5 ms-md-5 p-5 text-center text-md-start'>
         <div className='d-flex justify-content-center justify-content-md-start gap-2 px-0 mb-4'>
           <img src={logo} alt='' height={50} width={50}/> 

@@ -14,21 +14,21 @@ const Conhecendo = () => {
     {
         id: 2,
         numero: "02",
-        imagem: "../gabarita-ai/src/assets/caixabege.png",
+        imagem: "../assets/caixabege.png",
         subtitulo: "Meu Cronograma",
         texto: "A partir do resultado de seu teste, criaraemos um cronograma adaptado às suas necessidades, em que você pode planejar suas revisões!",
         },
     {
         id: 3,
         numero: "03",
-        imagem: "../assets/caixabranca.png",
+        imagem: "../assets/caixabege.png",
         subtitulo: "Meus Desempenhos",
         texto: "Acompanhe sua evolução e veja o quanto você está progredindo! Com nosso gráfico, você pode visualizar seus acertos, pontos de melhoria e ver os pontos necessários para retomada!",
         },
     {
         id: 4,
         numero: "04",
-        imagem: "../gabarita-ai/src/assets/caixabege.png",
+        imagem: "../assetS/caixabranca.png",
         subtitulo: "Planos",
         texto: "Escolha o plano que melhor se adapta à sua jornada rumo à aprovação! Oferecemos opções de pagamento flexíveis para que você tenha acesso a todos os recursos necessários sem preocupações!",
  },
@@ -42,9 +42,8 @@ return (
         {informacoes.map((info) => (
           <CardConheca
             key={info.id}
-            informacoes={info}
             numero={info.numero}
-            imagem={info.imagem}
+            // imagem={info.imagem}
             subtitulo={info.subtitulo}
             texto={info.texto}
           />

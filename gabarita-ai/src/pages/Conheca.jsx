@@ -7,29 +7,37 @@ import Conhecendo from "../components/Conhecendo";
 
 const Conheca = () => {
   return (
-    <div className="fundoconheca body  min-vh-100 d-flex align-items-center overflow-hidden">
+    <div className="fundoconheca body min-vh-100 d-flex align-items-center ">
+
+
+      
       <div className="d-flex align-items-center flex-column">
         <img className="position-relative" src={folha} alt="" />
-
-        <div className="position-absolute py-5 mt-3">
+        <div className="position-absolute py-5 mt-3 ">
           <h1 className="tituloconheca px-5">Conheça nosso site</h1>
           <p className="body mt-5 px-5">
             Siga o passo a passo, monte seu perfil e inicie seu processo de
             estudos
           </p>
-          <div className="d-flex justify-content-lg-around gap-5 mt-5 mb-3 divImagem">
+          <div className="d-flex justify-content-lg-around gap-5 mt-5 mb-3 divImagem ms-5">
             <div className="">
               <img className="w-25" src={logo} alt="" />
             </div>
 
-            <div className="d-flex align-items-end">
+            <div className="d-flex align-items-end w-50">
               <img className="w-100" src={estrela} alt="" />
             </div>
           </div>
-
-          <Conhecendo />
         </div>
       </div>
+
+
+        <div className="col-12 col-md-6 ">
+          <Conhecendo />
+        </div>
+
+
+
     </div>
   );
 };
