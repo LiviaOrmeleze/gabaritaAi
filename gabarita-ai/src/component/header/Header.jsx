@@ -3,7 +3,8 @@ import raposa from "../../assets/raposa.png"
 
 const Header = () => {
   return (
-    <header className='w-100 navbar d-flex justify-content-between align-items-center header fixed-top '> 
+    <header className='p-4 w-100 navbar  justify-align-content-between align-items-center  header  '> 
+    
     <div className="d-flex align-items-center ms-4 bgLogo rounded-5 "> 
     <img 
     className='object-fit ms-2'
