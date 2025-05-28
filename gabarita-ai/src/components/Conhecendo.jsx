@@ -7,28 +7,28 @@ const Conhecendo = () => {
     {
         id: 1,
         numero: "01",
-        // imagem: "",
+        imagem: "../assets/caixabranca.png",
         subtitulo: "Teste seu nível",
         texto: "Para avaliar suas habilidades nas principais disciplinas e identificar os tópicos que precisam de mais atenção. Aqui, você terá uma visão clara do seu desempenho!",
         },
     {
         id: 2,
         numero: "02",
-        // imagem: "",
+        imagem: "../gabarita-ai/src/assets/caixabege.png",
         subtitulo: "Meu Cronograma",
         texto: "A partir do resultado de seu teste, criaraemos um cronograma adaptado às suas necessidades, em que você pode planejar suas revisões!",
         },
     {
         id: 3,
         numero: "03",
-        imagem: "gabarita-ai/src/assets/caixabege.png",
+        imagem: "../assets/caixabranca.png",
         subtitulo: "Meus Desempenhos",
         texto: "Acompanhe sua evolução e veja o quanto você está progredindo! Com nosso gráfico, você pode visualizar seus acertos, pontos de melhoria e ver os pontos necessários para retomada!",
         },
     {
         id: 4,
         numero: "04",
-        // imagem: "",
+        imagem: "../gabarita-ai/src/assets/caixabege.png",
         subtitulo: "Planos",
         texto: "Escolha o plano que melhor se adapta à sua jornada rumo à aprovação! Oferecemos opções de pagamento flexíveis para que você tenha acesso a todos os recursos necessários sem preocupações!",
  },
@@ -44,7 +44,7 @@ return (
             key={info.id}
             informacoes={info}
             numero={info.numero}
-            // imagem={info.imagem}
+            imagem={info.imagem}
             subtitulo={info.subtitulo}
             texto={info.texto}
           />

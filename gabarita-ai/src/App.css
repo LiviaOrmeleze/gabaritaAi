@@ -1,51 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Mansalva&family=Quicksand:wght@300;400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Mansalva&family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 .fundoesquerdo {
-    background-color: #077d61;
+  background-color: #077d61;
 }
 
 .fundodireito {
-    background-color: #e7d7c9;
+  background-color: #e7d7c9;
 }
 
 .oqvcp {
-    background-color: #4e342e;
+  background-color: #4e342e;
 }
 
-.subtitulo{
-    color: #e7d7c9;
+.subtitulo {
+  color: #e7d7c9;
 }
 
-.conteudo{
-    color: #4e342e;
+.conteudo {
+  color: #4e342e;
 }
 
 .font-open-sans-bold {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700; /* Bold */
-  }
-  
-.bgsaibamais{
-    background-color: #df6d14;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700; /* Bold */
 }
 
-.botaosaibamais{
-    background-color: #077d61;
+.bgsaibamais {
+  background-color: #df6d14;
+}
+
+.botaosaibamais {
+  background-color: #077d61;
 }
 
 body {
-    font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
-.fundoconheca{
-    background-color: #002147!important;
+.fundoconheca {
+  background-color: #002147 !important;
 }
-  
+
 .tituloconheca {
-    font-family: 'Mansalva', cursive;
+  font-family: "Mansalva", cursive;
 }
-  
+
 .rotate-diagonal {
-    transform: rotate(-30deg); /* Inclina o texto */
-    display: inline-block;     /* Necessário para rotacionar corretamente */
-  }
+  transform: rotate(-30deg); /* Inclina o texto */
+  display: inline-block; /* Necessário para rotacionar corretamente */
+}
+
+.subtituloCards {
+  color: #df6d14;
+}
+
+.divImagem {
+  height: 175px;
+}
