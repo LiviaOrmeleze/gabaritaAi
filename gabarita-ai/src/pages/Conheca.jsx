@@ -34,7 +34,7 @@ const Conheca = () => {
       </div>
 
 
-        <div className="">
+        <div className="col-12 col-md-6 d-flex justify-content-center  p-4">
           <Conhecendo />
         </div>
 
