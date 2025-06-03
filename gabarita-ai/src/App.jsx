@@ -4,19 +4,30 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import Header from "./component/header/Header";
+import Header from "./component/Header";
 import "./scss/styles.scss";
 import Dicionario from "./pages/Dicionario";
+import Redacao from "./pages/Redacao";
+import Significados from "./pages/Significados";
+import Sinonimos from "./pages/Sinonimos";
+import Conectivos from "./pages/Conectivos";
+import Prepositivos from "./pages/Prepositivos";
+
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Header/>
+      <Header />
 
       <main className="flex-grow-1 d-flex flex-column">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Dicionario" element={<Dicionario/>}/>
+          <Route path="/Dicionario" element={<Dicionario />} />
+          <Route path="/Redacao" element={<Redacao />} />
+          <Route path="/significados" element={<Significados />} />
+          <Route path="/sinonimos" element={<Sinonimos />} />
+          <Route path="/conectivos" element={<Conectivos />} />
+          <Route path="/prepositivos" element={<Prepositivos />} />
         </Routes>
       </main>
     </BrowserRouter>

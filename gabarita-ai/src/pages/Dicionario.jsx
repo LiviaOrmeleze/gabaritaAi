@@ -1,10 +1,12 @@
 import React from "react";
 import livros from "../assets/livros.png";
 import logo from "../assets/Raposa.png";
+import ListaDicionario from "../component/ListaDicionario";
+
 const Dicionario = () => {
   return (
     <>
-    <div className="d-flex justify-content-center align-items-center min-vh-100  ">
+   <div className="d-flex justify-content-center align-items-center min-vh-100  ">
 
       <div> 
         
@@ -22,37 +24,41 @@ const Dicionario = () => {
         <p className="fs-3 fw-bold fonteGaba text-uppercase text-dark"
         style={{ letterSpacing: '5px' }}>
           Dicionário
-        </p>
+        </p> 
         <p className="fs-4">Tire suas dúvidas e aumente seu repertório!</p>
         <div className="d-flex justify-content-center align-items-center">
           <img className="img-fluid" src={livros} alt="Livros" width={200} height={200} />
         </div>
       </div>
 
-      <div className="listaDicio ms-auto">
-
-        <div className="d-flex bgSig  text-light gap-4 p-4 ">
-        <p className="fs-2 text-uppercase fw-bold align-content-center">Significados</p>
-        <p className="fs-5"> Exibe definições detalhadas das palavras pesquisadas.</p>
-        </div>
-
-        <div className="d-flex bgSin   text-light gap-4 p-4">
-        <p className="fs-2 text-uppercase fw-bold align-content-center">Sinônimos</p>
-        <p className="fs-5"> Lista palavras com significados semelhantes para ampliar o vocabulário.</p>
-        </div>
-
-        <div className="d-flex bgCo   text-light gap-4 p-4">
-          <p className=" fs-2 text-uppercase fw-bold align-content-center">Conectivos</p>
-          <p className="fs-5">Mostra palavras e expressões que ajudam na coesão e fluidez dos textos.</p>
-        </div>
-
-        <div className="d-flex bgPre   text-light gap-4 p-4">
-          <p className="fs-2 text-uppercase fw-bold align-content-center">Prepositivos</p>
-          <p className="fs-5">Apresenta termos úteis para introduzir, argumentar e concluir ideias.</p>
-          </div>
-        
+      <div className="lista ms-auto">
+        <ListaDicionario
+          title="Significados"
+          description="Exibe definições detalhadas das palavras pesquisadas."
+          bgClass="bgSig"
+          link="/significados"
+        />
+        <ListaDicionario
+          title="Sinônimos"
+          description="Lista palavras com significados semelhantes para ampliar o vocabulário."
+          bgClass="bgSin"
+          link="/sinonimos"
+        />
+        <ListaDicionario
+          title="Conectivos"
+          description="Mostra palavras e expressões que ajudam na coesão e fluidez dos textos."
+          bgClass="bgCo"
+          link="/conectivos"
+        />
+        <ListaDicionario
+          title="Prepositivos"
+          description="Apresenta termos úteis para introduzir, argumentar e concluir ideias."
+          bgClass="bgPre"
+          link="/prepositivos"
+        />
       </div>
-          </div>
+</div>
+
     </>
   );
 };

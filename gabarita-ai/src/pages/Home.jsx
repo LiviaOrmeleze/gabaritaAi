@@ -28,14 +28,13 @@ const Home = () => {
         Comece seu estudos <i class="bi bi-caret-right text-light"></i>
       </button>
 
-      <div className="position-absolute top-0 end-0 mt-5 me-3">
+      <div className="d-flex position-absolute flex-column top-0 end-0 mt-5 me-3">
        {/* Banner com texto sobreposto */}
-       <div className="position-relative d-inline-block m-3" style={{ width: "650px", height: "200px" }}>
+       <div className="position-relative d-inline-block m-3" style={{ width: "600px", height: "200px" }}>
         <img
-          className="img-fluid rounded-5 w-100 h-100"
+          className="img-fluid rounded-5 w-100 h-100 object-fit-cover"
           src={banner}
           alt="Banner"
-          style={{ objectFit: "cover" }}
         />
         {/* Texto sobre o banner */}
         <div className="position-absolute top-50 start-50 translate-middle text-center">

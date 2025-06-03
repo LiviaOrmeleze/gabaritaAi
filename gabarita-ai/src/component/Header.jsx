@@ -1,5 +1,5 @@
 import React from 'react'
-import raposa from "../../assets/raposa.png"
+import raposa from "../assets/Raposa.png"
 
 const Header = () => {
   return (

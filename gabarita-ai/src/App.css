@@ -92,6 +92,15 @@ body {
     font-family: var(--font-family-tertiary)!important;
 }
 
-.listaDicio{
-    width: 800px;
+.lista{
+    width: 700px;
+}
+
+.infDiRe{
+    width: 500px;
+    height: 600px;
+}
+
+.fonteBg{
+    color : var(--pastel-orange-1000) !important;
 }
