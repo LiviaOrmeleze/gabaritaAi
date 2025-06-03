@@ -8,11 +8,11 @@ import linhatorta from "../assets/linhatorta.png";
 
 const Conheca = () => {
   return (
-    <div className="fundoconheca body min-vh-100 d-flex align-items-center ">
+    <div className="fundoconheca body min-vh-100 d-flex align-items-center overflow-hidden">
 
 
-      
-      <div className="d-flex align-items-center flex-column">
+     <div className="col-12 col-md-6 d-flex justify-content-center position-relative">
+      <div className="d-flex align-items-center flex-column position-absolute">
         <img className="position-relative" src={folha} alt="" />
         <div className="position-absolute py-5 mt-3 ">
           <h1 className="tituloconheca px-5 ms-4 py-3">Conheça nosso site</h1>
@@ -32,10 +32,11 @@ const Conheca = () => {
           </div>
         </div>
       </div>
+     </div>
 
 
-        <div className="col-12 col-md-6 d-flex justify-content-center  p-4">
-          <Conhecendo />
+        <div className="col-12 col-md-6 d-flex justify-content-center">
+        <Conhecendo />
         </div>
 
 

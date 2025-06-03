@@ -56,3 +56,188 @@ body {
 .divImagem {
   height: 175px;
 }
+
+
+
+
+
+
+
+
+
+
+
+.calendario-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #212529;
+  color: white;
+  min-height: 100vh;
+}
+
+.mes-titulo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.dias-semana {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.dia-semana-header {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+.dias-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+.dia-celula {
+  border: 1px solid #444;
+  min-height: 120px;
+  padding: 5px;
+  position: relative;
+}
+
+.dia-numero {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.eventos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.evento-item {
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.evento-materia {
+  font-weight: bold;
+  text-transform: lowercase;
+}
+
+.evento-tema {
+  font-size: 0.75rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.evento-tempo {
+  font-size: 0.7rem;
+  text-align: right;
+}
+
+/* Cores para as matérias */
+.bg-purple {
+  background-color: #9370db;
+  color: white;
+}
+
+.bg-white {
+  background-color: white;
+  color: #212529;
+}
+
+.bg-pink {
+  background-color: #ff69b4;
+  color: white;
+}
+
+.bg-info {
+  background-color: #5bc0de;
+  color: white;
+}
+
+.bg-success {
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Visualização semanal */
+.week-view .dias-semana {
+  height: calc(100vh - 150px);
+}
+
+.dia-coluna {
+  flex: 1;
+  border: 1px solid #444;
+  display: flex;
+  flex-direction: column;
+}
+
+.dia-header {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #444;
+}
+
+.dia-nome {
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+.eventos-dia {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Visualização diária */
+.day-view {
+  height: calc(100vh - 150px);
+  overflow-y: auto;
+}
+
+.horario-row {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+.horario-label {
+  width: 80px;
+  font-weight: bold;
+}
+
+.horario-eventos {
+  display: flex;
+  gap: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .dias-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .week-view .dias-semana {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .dia-coluna {
+    margin-bottom: 10px;
+  }
+}
