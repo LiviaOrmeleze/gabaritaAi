@@ -1,11 +1,92 @@
 export const eventosEstudo = [
+  // Dia 04
+  {
+    dia: 4,
+    materia: "mat",
+    tema: "trigonometria",
+    tempo: "1h30",
+    cor: "bg-laranja",
+    horario: "09:30",
+  },
+  // Dia 12
+  {
+    dia: 12,
+    materia: "quim",
+    tema: "ligações químicas",
+    tempo: "2h",
+    cor: "bg-cinza",
+    horario: "14:00",
+  },
+  // Dia 13
+  {
+    dia: 13,
+    materia: "hist",
+    tema: "Brasil colônia",
+    tempo: "1h",
+    cor: "bg-vinho",
+    horario: "08:00",
+  },
+  // Dia 14
+  {
+    dia: 14,
+    materia: "geo",
+    tema: "climas do mundo",
+    tempo: "2h",
+    cor: "bg-marrom",
+    horario: "10:00",
+  },
+  // Dia 15
+  {
+    dia: 15,
+    materia: "filo",
+    tema: "ética e moral",
+    tempo: "1h30",
+    cor: "bg-azul2",
+    horario: "16:00",
+  },
+  // Dia 16
+  {
+    dia: 16,
+    materia: "bio",
+    tema: "citologia: organelas",
+    tempo: "2h",
+    cor: "bg-verde2",
+    horario: "13:00",
+  },
+  // Dia 17
+  {
+    dia: 17,
+    materia: "quim",
+    tema: "funções inorgânicas",
+    tempo: "1h30",
+    cor: "bg-cinza",
+    horario: "09:00",
+  },
+  // Dia 18
+  {
+    dia: 18,
+    materia: "hist",
+    tema: "Iluminismo",
+    tempo: "2h",
+    cor: "bg-vinho",
+    horario: "11:00",
+  },
+  // Dia 19
+  {
+    dia: 19,
+    materia: "geo",
+    tema: "relevo brasileiro",
+    tempo: "1h",
+    cor: "bg-marrom",
+    horario: "15:00",
+  },
   // Dia 20
   {
     dia: 20,
     materia: "fis",
     tema: "teorias científicas",
     tempo: "2h",
-    cor: "bg-purple",
+    cor: "bg-verde",
     horario: "08:00",
   },
   // Dia 21
@@ -14,7 +95,7 @@ export const eventosEstudo = [
     materia: "mat",
     tema: "conjuntos: conjuntos",
     tempo: "1h30",
-    cor: "bg-white",
+    cor: "bg-laranja",
     horario: "09:00",
   },
   // Dia 22
@@ -23,7 +104,7 @@ export const eventosEstudo = [
     materia: "mat",
     tema: "raciocínio lógico",
     tempo: "2h",
-    cor: "bg-white",
+    cor: "bg-laranja",
     horario: "10:00",
   },
   // Dia 23
@@ -32,7 +113,7 @@ export const eventosEstudo = [
     materia: "mat",
     tema: "função (parte 1)",
     tempo: "1h30",
-    cor: "bg-white",
+    cor: "bg-laranja",
     horario: "09:00",
   },
   // Dia 24
@@ -41,7 +122,7 @@ export const eventosEstudo = [
     materia: "geo",
     tema: "cartografia (parte 1)",
     tempo: "2h",
-    cor: "bg-pink",
+    cor: "bg-marrom",
     horario: "14:00",
   },
   // Dia 25
@@ -50,7 +131,7 @@ export const eventosEstudo = [
     materia: "por",
     tema: "interpretação de texto",
     tempo: "1h30",
-    cor: "bg-info",
+    cor: "bg-roxo",
     horario: "10:00",
   },
   // Dia 26
@@ -59,7 +140,7 @@ export const eventosEstudo = [
     materia: "por",
     tema: "funções da linguagem",
     tempo: "2h",
-    cor: "bg-info",
+    cor: "bg-roxo",
     horario: "13:00",
   },
   // Dia 27
@@ -68,7 +149,7 @@ export const eventosEstudo = [
     materia: "por",
     tema: "figuras de linguagem",
     tempo: "1h30",
-    cor: "bg-info",
+    cor: "bg-roxo",
     horario: "15:00",
   },
   // Dia 28
@@ -77,7 +158,7 @@ export const eventosEstudo = [
     materia: "ing",
     tema: "tempos verbais",
     tempo: "2h",
-    cor: "bg-success",
+    cor: "bg-marinho",
     horario: "09:00",
   },
   // Dia 29
@@ -86,7 +167,7 @@ export const eventosEstudo = [
     materia: "geo",
     tema: "cartografia (parte 2)",
     tempo: "1h30",
-    cor: "bg-pink",
+    cor: "bg-marrom",
     horario: "11:00",
   },
   // Dia 30
@@ -95,16 +176,16 @@ export const eventosEstudo = [
     materia: "red",
     tema: "conclusão",
     tempo: "2h",
-    cor: "bg-purple",
+    cor: "bg-azul",
     horario: "14:00",
   },
-  // Eventos adicionais para o dia 20 (para visualização diária)
+  // Eventos adicionais para o dia 20
   {
     dia: 20,
     materia: "fis",
     tema: "áreas",
     tempo: "1h30",
-    cor: "bg-purple",
+    cor: "bg-verde",
     horario: "10:00",
   },
   // Eventos adicionais para o dia 21
@@ -113,7 +194,7 @@ export const eventosEstudo = [
     materia: "mat",
     tema: "conjuntos: reta",
     tempo: "1h",
-    cor: "bg-white",
+    cor: "bg-laranja",
     horario: "11:00",
   },
   // Eventos adicionais para o dia 23
@@ -122,7 +203,7 @@ export const eventosEstudo = [
     materia: "mat",
     tema: "função (parte 2)",
     tempo: "1h30",
-    cor: "bg-white",
+    cor: "bg-laranja",
     horario: "14:00",
   },
   // Eventos adicionais para o dia 30
@@ -131,7 +212,7 @@ export const eventosEstudo = [
     materia: "red",
     tema: "citações na redação",
     tempo: "1h",
-    cor: "bg-purple",
+    cor: "bg-azul",
     horario: "16:00",
   },
 ]

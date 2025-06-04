@@ -2,10 +2,10 @@ import PropTypes from "prop-types"
 
 function EventoItem({ materia, tema, tempo, cor }) {
   return (
-    <div className={`evento-item ${cor}`}>
-      <div className="evento-materia">{materia}</div>
-      <div className="evento-tema">{tema}</div>
-      <div className="evento-tempo">{tempo}</div>
+    <div className={`p-1 rounded small ${cor}`}>
+      <div className="evento-materia fw-bold">{materia}</div>
+      <div className="fs-6 text-nowrap text-truncate">{tema}</div>
+      <div className="fs-6 text-end">{tempo}</div>
     </div>
   )
 }

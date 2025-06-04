@@ -5,9 +5,20 @@ function SemanaView({ eventos }) {
   // Dias da semana abreviados em português
   const diasSemana = ["dom", "seg", "ter", "qua", "qui", "sex", "sab"];
 
-  // Filtrar eventos apenas para a semana atual (simplificado)
+  // Obter a data atual
+  const hoje = new Date();
+
+  // Calcular o início e o fim da semana atual
+  const diaAtual = hoje.getDate();
+  const diaDaSemana = hoje.getDay(); // Índice do dia da semana (0 = domingo, 6 = sábado)
+  const inicioSemana = new Date(hoje);
+  inicioSemana.setDate(diaAtual - diaDaSemana); // Primeiro dia da semana
+  const fimSemana = new Date(inicioSemana);
+  fimSemana.setDate(inicioSemana.getDate() + 6); // Último dia da semana
+
+  // Filtrar eventos apenas para a semana atual
   const eventosDaSemana = eventos.filter(
-    (evento) => evento.dia >= 20 && evento.dia <= 26
+    (evento) => evento.dia >= inicioSemana.getDate() && evento.dia <= fimSemana.getDate()
   );
 
   // Agrupar eventos por dia
@@ -21,16 +32,16 @@ function SemanaView({ eventos }) {
 
   return (
     <div className="week-view">
-      <div className="dias-semana d-flex">
+      <div className="d-flex justify-content-between mb-2 d-flex">
         {diasSemana.map((dia, index) => {
-          const diaDoMes = 20 + index;
+          const diaDoMes = inicioSemana.getDate() + index;
           return (
-            <div key={dia} className="dia-coluna">
-              <div className="dia-header">
-                <div className="dia-nome">{dia}</div>
-                <div className="dia-numero">{diaDoMes}</div>
+            <div key={dia} className="d-flex flex-column flex-fill border ">
+              <div className="p-2 text-center border-bottom bordercalendario ">
+                <div className="fw-normal text-lowercase">{dia}</div>
+                <div className="dia-numero fs-5 fw-bold">{diaDoMes}</div>
               </div>
-              <div className="eventos-dia">
+              <div className="p-1 d-flex flex-column gap-1 overflow-auto flex-fill bordercalendario ">
                 {eventosPorDia[diaDoMes]?.map((evento, idx) => (
                   <EventoItem
                     key={`${diaDoMes}-${idx}`}

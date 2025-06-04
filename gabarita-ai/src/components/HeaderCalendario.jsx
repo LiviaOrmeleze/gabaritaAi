@@ -1,12 +1,11 @@
 import React from 'react'
 import PropTypes from "prop-types";
 
-
 function HeaderCalendario({ mesAtual, onChangeView, visualizacaoAtual, onPrevious, onNext }) {
   return (
-    <div className="calendar-header d-flex justify-content-between align-items-center mb-3">
+    <div className="calendar-header d-flex justify-content-between align-items-center mb-3 ">
       <div className="d-flex align-items-center">
-        <h1 className="mes-titulo">{mesAtual}</h1>
+        <h1 className="fs-3 jetbrains m-0">{mesAtual}</h1>
         <div className="navegacao-botoes ms-4">
           <button className="btn btn-link" onClick={onPrevious}>
             <i className="bi bi-chevron-left"></i>
@@ -17,24 +16,24 @@ function HeaderCalendario({ mesAtual, onChangeView, visualizacaoAtual, onPreviou
         </div>
       </div>
 
-      <div className="btn-group">
+      <div className="btn-group me-5 px-3 ">
         <button
           type="button"
-          className={`btn ${visualizacaoAtual === "mes" ? "btn-dark" : "btn-secondary"}`}
+          className={`btn ${visualizacaoAtual === "mes" ? "btncalendario" : "btn-secondary"}`}
           onClick={() => onChangeView("mes")}
         >
           Mês
         </button>
         <button
           type="button"
-          className={`btn ${visualizacaoAtual === "semana" ? "btn-dark" : "btn-secondary"}`}
+          className={`btn ${visualizacaoAtual === "semana" ? "btn-light" : "btn-secondary"}`}
           onClick={() => onChangeView("semana")}
         >
           Semana
         </button>
         <button
           type="button"
-          className={`btn ${visualizacaoAtual === "dia" ? "btn-dark" : "btn-secondary"}`}
+          className={`btn ${visualizacaoAtual === "dia" ? "btn-light" : "btn-secondary"}`}
           onClick={() => onChangeView("dia")}
         >
           Dia

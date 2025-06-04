@@ -2,47 +2,30 @@ import PropTypes from "prop-types";
 import EventoItem from "./EventoItem";
 
 function DiaView({ eventos }) {
-  // Para simplificar, vamos mostrar apenas os eventos do dia 20
-  const diaAtual = 20;
-  const eventosDoDia = eventos.filter((evento) => evento.dia === diaAtual);
+  // Obter o dia atual dinamicamente
+  const diaAtual = new Date().getDate();
 
-  // Horários do dia (simplificado)
-  const horarios = [
-    "08:00",
-    "09:00",
-    "10:00",
-    "11:00",
-    "12:00",
-    "13:00",
-    "14:00",
-    "15:00",
-    "16:00",
-    "17:00",
-  ];
+  // Filtrar eventos para o dia atual
+  const eventosDoDia = eventos.filter((evento) => evento.dia === diaAtual);
 
   return (
     <div className="day-view">
       <h2 className="mb-3">Dia {diaAtual}</h2>
-
-      <div className="horarios-container">
-        {horarios.map((horario) => (
-          <div key={horario} className="horario-row d-flex">
-            <div className="horario-label">{horario}</div>
-            <div className="horario-eventos flex-grow-1">
-              {eventosDoDia
-                .filter((evento) => evento.horario === horario)
-                .map((evento, index) => (
-                  <EventoItem
-                    key={`${horario}-${index}`}
-                    materia={evento.materia}
-                    tema={evento.tema}
-                    tempo={evento.tempo}
-                    cor={evento.cor}
-                  />
-                ))}
-            </div>
-          </div>
-        ))}
+      <h3 className="mb-3">Conteúdo do dia:</h3>
+      <div className="eventos-container">
+        {eventosDoDia.length > 0 ? (
+          eventosDoDia.map((evento, index) => (
+            <EventoItem
+              key={index}
+              materia={evento.materia}
+              tema={evento.tema}
+              tempo={evento.tempo}
+              cor={evento.cor}
+            />
+          ))
+        ) : (
+          <p className="text-muted">Nenhum conteúdo para estudar hoje.</p>
+        )}
       </div>
     </div>
   );
