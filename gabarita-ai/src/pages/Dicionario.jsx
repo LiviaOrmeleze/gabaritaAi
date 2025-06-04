@@ -1,5 +1,5 @@
 import React from "react";
-import livros from "../assets/livros.png";
+import livros from "../assets/livros1.png";
 import logo from "../assets/Raposa.png";
 import ListaDicionario from "../components/ListaDicionario";
 
