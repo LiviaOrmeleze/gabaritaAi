@@ -1,7 +1,7 @@
 import React from "react";
 import livros from "../assets/livros.png";
 import logo from "../assets/Raposa.png";
-import ListaDicionario from "../component/ListaDicionario";
+import ListaDicionario from "../components/ListaDicionario";
 
 const Dicionario = () => {
   return (

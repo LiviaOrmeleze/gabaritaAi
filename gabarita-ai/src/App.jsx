@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import Header from "./component/Header";
+import Header from "./components/Header";
 import "./scss/styles.scss";
 import Dicionario from "./pages/Dicionario";
 import Redacao from "./pages/Redacao";
@@ -13,9 +13,6 @@ import Sinonimos from "./pages/Sinonimos";
 import Conectivos from "./pages/Conectivos";
 import Prepositivos from "./pages/Prepositivos";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';  
-import "bootstrap/dist/js/bootstrap.min.js";
 
 import Escolha from "./pages/Escolha";
 import Conheca from "./pages/Conheca";
@@ -27,8 +24,6 @@ const App = () => {
   return (
     <BrowserRouter>
       <Header />
-
-    
       <main className="flex-grow-1 d-flex flex-column">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -38,8 +33,6 @@ const App = () => {
           <Route path="/sinonimos" element={<Sinonimos />} />
           <Route path="/conectivos" element={<Conectivos />} />
           <Route path="/prepositivos" element={<Prepositivos />} />
-        </Routes>
-      <Routes>
         <Route path="/escolha" element={<Escolha />} />
         <Route path="/conhecanossosite" element={<Conheca />} />
         <Route path="/saibamais" element={<SaibaMais />} />
