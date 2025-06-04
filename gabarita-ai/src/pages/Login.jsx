@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 import { Link } from "react-router";
+import raposa from "../assets/raposa.png"; // Certifique-se de que o caminho está correto
 
 const Login = () => {
   return (
@@ -46,7 +47,7 @@ const Login = () => {
 
         {/* Raposa maior e centralizada */}
         <img
-          src="../assets/raposa.png"
+          src={raposa}
           alt="Mascote de Raposa"
           className="img-fluid mt-4 position-relative"
           style={{
