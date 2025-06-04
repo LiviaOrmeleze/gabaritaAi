@@ -29,6 +29,10 @@ body {
     background: var(--pastel-orange-900);
 }
 
+.btnSig {
+    background: var(--pastel-orange-900);
+}
+
 
 .blocoVesti {
     background: var(--pastel-pink-90);
