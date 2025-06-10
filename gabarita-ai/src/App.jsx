@@ -23,16 +23,10 @@ import Sinonimos from "./pages/Sinonimos";
 import Conectivos from "./pages/Conectivos";
 import Prepositivos from "./pages/Prepositivos";
 
-
-import Escolha from "./pages/Escolha";
-import Conheca from "./pages/Conheca";
-import SaibaMais from "./pages/SaibaMais";
 import Cronograma from "./pages/Cronograma";
 
 const App = () => {
-
   return (
-    
     <BrowserRouter>
       <Header />
       <main className="flex-grow-1 d-flex flex-column">
@@ -40,26 +34,22 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/Dicionario" element={<Dicionario />} />
           <Route path="/Redacao" element={<Redacao />} />
-<Route path="/login" element={<Login />} />
-<Route path="/cadastro" element={<Cadastro />} />
-<Route path="/estudar" element={<Estudar />} />
-<Route path="/planos" element={<Planos />} />
-<Route path="/atualidades" element={<Atualidades />} />
-<Route path="/desempenho" element={<Desempenho />} />
-<Route path="/materias" element={<Materias />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/cadastro" element={<Cadastro />} />
+          <Route path="/estudar" element={<Estudar />} />
+          <Route path="/planos" element={<Planos />} />
+          <Route path="/atualidades" element={<Atualidades />} />
+          <Route path="/desempenho" element={<Desempenho />} />
+          <Route path="/materias" element={<Materias />} />
           <Route path="/significados" element={<Significados />} />
           <Route path="/sinonimos" element={<Sinonimos />} />
           <Route path="/conectivos" element={<Conectivos />} />
           <Route path="/prepositivos" element={<Prepositivos />} />
-        <Route path="/escolha" element={<Escolha />} />
-        <Route path="/conhecanossosite" element={<Conheca />} />
-        <Route path="/saibamais" element={<SaibaMais />} />
-        <Route path="/cronograma" element={<Cronograma />} />
-      </Routes>
+          <Route path="/cronograma" element={<Cronograma />} />
+        </Routes>
       </main>
     </BrowserRouter>
   );
 };
-  
-export default App;
 
+export default App;
