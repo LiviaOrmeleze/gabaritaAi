@@ -6,7 +6,7 @@ import quadro from "../assets/quadro.png";
 const HomeOfc = () => {
   return (
     <>
-    <div className="position-absolute d-flex">
+    <div className="d-flex">
 
       <div className="d-flex mt-5">
         <img
@@ -62,6 +62,7 @@ const HomeOfc = () => {
         </div>
       </div>
       </div>
+      
           </div>
 
     </>

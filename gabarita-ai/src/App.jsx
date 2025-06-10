@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router";
 import Login from "./pages/Login";
 import Cadastro from "./pages/Cadastro";
+import PaginaPrincipal from "./pages/PaginaPrincipal";
 import Planos from "./pages/Planos";
 import Atualidades from "./pages/Atualidades";
 import Desempenho from "./pages/Desempenho";
@@ -26,12 +27,14 @@ import Prepositivos from "./pages/Prepositivos";
 import Conheca from "./pages/Conheca";
 import Cronograma from "./pages/Cronograma";
 
+
 const App = () => {
   return (
     <BrowserRouter>
       <Header />
       <main className="flex-grow-1 d-flex flex-column">
         <Routes>
+          <Route path="/paginaprincipal" element={<PaginaPrincipal />} />
           <Route path="/" element={<Home />} />
           <Route path="/Dicionario" element={<Dicionario />} />
           <Route path="/Redacao" element={<Redacao />} />
