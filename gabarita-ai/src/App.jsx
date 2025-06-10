@@ -9,7 +9,6 @@ import Desempenho from "./pages/Desempenho";
 import Materias from "./pages/Materias";
 
 import "./App.css";
-import Home from "./pages/Home";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -23,10 +22,8 @@ import Sinonimos from "./pages/Sinonimos";
 import Conectivos from "./pages/Conectivos";
 import Prepositivos from "./pages/Prepositivos";
 
-
 import Conheca from "./pages/Conheca";
 import Cronograma from "./pages/Cronograma";
-
 
 const App = () => {
   return (
@@ -34,23 +31,22 @@ const App = () => {
       <Header />
       <main className="flex-grow-1 d-flex flex-column">
         <Routes>
-          <Route path="/paginaprincipal" element={<PaginaPrincipal />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<PaginaPrincipal />} />
           <Route path="/Dicionario" element={<Dicionario />} />
           <Route path="/Redacao" element={<Redacao />} />
-<Route path="/login" element={<Login />} />
-<Route path="/cadastro" element={<Cadastro />} />
-<Route path="/planos" element={<Planos />} />
-<Route path="/atualidades" element={<Atualidades />} />
-<Route path="/desempenho" element={<Desempenho />} />
-<Route path="/materias" element={<Materias />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/cadastro" element={<Cadastro />} />
+          <Route path="/planos" element={<Planos />} />
+          <Route path="/atualidades" element={<Atualidades />} />
+          <Route path="/desempenho" element={<Desempenho />} />
+          <Route path="/materias" element={<Materias />} />
           <Route path="/significados" element={<Significados />} />
           <Route path="/sinonimos" element={<Sinonimos />} />
           <Route path="/conectivos" element={<Conectivos />} />
           <Route path="/prepositivos" element={<Prepositivos />} />
-        <Route path="/conhecanossosite" element={<Conheca />} />
-        <Route path="/cronograma" element={<Cronograma />} />
-      </Routes>
+          <Route path="/conhecanossosite" element={<Conheca />} />
+          <Route path="/cronograma" element={<Cronograma />} />
+        </Routes>
       </main>
     </BrowserRouter>
   );
