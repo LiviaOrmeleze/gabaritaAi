@@ -1,6 +1,6 @@
 import React from "react";
 
-import folha from "../assets/folha.png";
+import folha2 from "../assets/folha2.png";
 import logo from "../assets/logo.png";
 import estrela from "../assets/estrela.png";
 import Conhecendo from "../components/Conhecendo";
@@ -14,7 +14,7 @@ const Conheca = () => {
      <div className="col-12 col-md-6 d-flex justify-content-center position-relative">
       <div className="d-flex align-items-center flex-column ">
 
-        <img className="position-relative" src={folha} alt="" />
+        <img className="position-relative" src={folha2} alt="" />
         <div className="position-absolute py-5 mt-3 ">
           <h1 className="tituloconheca px-5 ms-4 py-3">Conheça nosso site</h1>
         <div className="position-absolute"> 
