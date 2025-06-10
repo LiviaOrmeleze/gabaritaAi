@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../assets/Raposa.png";
-import mulher from "../assets/mulher.png";
+import logo from "../assets/raposa.png";
+// import mulher from "../assets/mulher.png";
 
 const Redacao = () => {
   return (
@@ -30,7 +30,7 @@ const Redacao = () => {
           <div className="d-flex justify-content-center align-items-center">
             <img
               className="img-fluid"
-              src={mulher}
+              // src={mulher}
               alt="Mulher escrevendo"
               width={200}
               height={200}

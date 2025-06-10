@@ -4,6 +4,8 @@ import logo from "../assets/logo.png";
 import celular from "../assets/celular.png";
 
 const SaibaMais = () => {
+
+
   return (
     <div className='bgsaibamais min-vh-100 text-light d-flex flex-column flex-md-row align-items-center justify-content-between overflow-hidden'>
       
