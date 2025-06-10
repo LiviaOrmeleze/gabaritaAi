@@ -13,10 +13,10 @@ const CardConheca = (props) => {
       className= 'position-relative img-fluid'
       />
 
-      <div className='position-absolute p-5'>
+      <div className='position-absolute p-4'>
 
-      <div className='d-flex'>
-      <div className='align-items-center justify-content-center d-flex flex-column me-4'>
+      <div className='d-flex gap-4 align-items-center'>
+      <div className='align-items-center justify-content-center d-flex flex-column'>
       <img 
       src={miniestrelinha}
       className='position-relative img-fluid'
@@ -26,9 +26,9 @@ const CardConheca = (props) => {
       <h3 className='position-absolute'>{props.numero}</h3>
       </div>
 
-      <p className='subtituloCards fw-bold fs-4 d-flex justify-content-center align-items-center w-25'>{props.subtitulo}</p>
+      <p className='subtituloCards fw-bold fs-4 d-flex justify-content-center align-items-center w-25 ms-3'>{props.subtitulo}</p>
       </div>
-      <p className='text-center mt-2 '>{props.texto}</p>
+      <p className='text-center mt-2 gap-5 flex-column w-75 ms-4'>{props.texto}</p>
 
       </div>
 

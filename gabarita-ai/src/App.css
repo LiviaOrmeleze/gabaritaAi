@@ -479,3 +479,8 @@ body {
 .btncalendario{
   background-color: #e7d7c9;
 }
+
+.link-sem-estilo {
+  text-decoration: none; /* Remove o sublinhado */
+  color: inherit; /* Herda a cor do elemento pai */
+}

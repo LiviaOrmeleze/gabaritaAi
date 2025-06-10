@@ -24,6 +24,7 @@ import Prepositivos from "./pages/Prepositivos";
 
 import Conheca from "./pages/Conheca";
 import Cronograma from "./pages/Cronograma";
+// import MateriaEspecifica from "./pages/MateriaEspecifica";
 
 const App = () => {
   return (
@@ -45,6 +46,7 @@ const App = () => {
           <Route path="/prepositivos" element={<Prepositivos />} />
           <Route path="/conhecanossosite" element={<Conheca />} />
           <Route path="/cronograma" element={<Cronograma />} />
+          {/* <Route path="/materiaespecifica" element={<MateriaEspecifica />} /> */}
         </Routes>
       </main>
     </BrowserRouter>
