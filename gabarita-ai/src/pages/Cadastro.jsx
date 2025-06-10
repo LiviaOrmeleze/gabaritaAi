@@ -1,8 +1,42 @@
-import React from "react";
-import { Link } from "react-router";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import raposa from "../assets/raposa.png"; // Certifique-se de que o caminho está correto
 
 const Cadastro = () => {
+  const [email, setEmail] = useState(""); // Estado para armazenar o e-mail
+  const [password, setPassword] = useState(""); // Estado para armazenar a senha
+  const navigate = useNavigate();
+
+  const cadastro = async (e) => {
+    e.preventDefault(); // Evita o reload da página
+    const userData = {
+      email,
+      password,
+    };
+    try {
+      const response = await fetch("https://localhost:7061/Users/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          accept: "*/*",
+        },
+        body: JSON.stringify(userData),
+      });
+
+      if (response.ok) {
+        // Salva o email no localStorage
+        localStorage.setItem("userEmail", email);
+        // Redireciona para a Home
+        navigate("/");
+      } else {
+        const errorData = await response.json();
+        alert(`Erro ao cadastrar: ${errorData.message || "Erro desconhecido"}`);
+      }
+    } catch (error) {
+      alert(`Erro ao conectar ao servidor: ${error.message}`);
+    }
+  };
+
   return (
     <div
       className="d-flex vh-100"
@@ -84,33 +118,8 @@ const Cadastro = () => {
             CADASTRA.AI
           </h2>
 
-          <form>
-            <div className="mb-3">
-              <label
-                htmlFor="nome"
-                className="form-label"
-                style={{
-                  color: "#00BFA6",
-                  fontFamily: "'Nunito', sans-serif",
-                  borderRadius: "10px",
-                }}
-              >
-                Nome
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="nome"
-                style={{
-                  borderRadius: "12px",
-                  fontFamily: "'Nunito', sans-serif",
-                  color: "#ffffff",
-                  backgroundColor: "rgba(255, 255, 255, 0.1)",
-                  border: "1px solid #00BFA6",
-                }}
-              />
-            </div>
-
+          <form onSubmit={cadastro}>
+            {/* Campo Email */}
             <div className="mb-3">
               <label
                 htmlFor="contato"
@@ -121,12 +130,14 @@ const Cadastro = () => {
                   borderRadius: "10px",
                 }}
               >
-                Email ou Telefone
+                Email
               </label>
               <input
-                type="text"
+                type="email"
                 className="form-control"
                 id="contato"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 style={{
                   borderRadius: "12px",
                   fontFamily: "'Nunito', sans-serif",
@@ -134,9 +145,11 @@ const Cadastro = () => {
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                   border: "1px solid #00BFA6",
                 }}
+                required
               />
             </div>
 
+            {/* Campo Senha */}
             <div className="mb-3">
               <label
                 htmlFor="senha"
@@ -153,6 +166,8 @@ const Cadastro = () => {
                 type="password"
                 className="form-control"
                 id="senha"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 style={{
                   borderRadius: "12px",
                   fontFamily: "'Nunito', sans-serif",
@@ -160,6 +175,7 @@ const Cadastro = () => {
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                   border: "1px solid #00BFA6",
                 }}
+                required
               />
             </div>
 
