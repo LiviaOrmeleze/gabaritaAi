@@ -28,7 +28,6 @@ import Cronograma from "./pages/Cronograma";
 const App = () => {
   return (
     <BrowserRouter>
-      
       <main className="flex-grow-1 d-flex flex-column">
         <Routes>
           <Route path="/" element={<PaginaPrincipal />} />
