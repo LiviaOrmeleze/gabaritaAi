@@ -3,10 +3,10 @@ import Header from "../components/Header";
 import pessoasHome from "../assets/home.jpg";
 import banner from "../assets/banner.png";
 import quadro from "../assets/quadro.png";
-import { useNavigate } from "react-router-dom"; // Adicione este import
+
 
 const Home = () => {
-  const navigate = useNavigate(); // Inicialize o hook
+
 
   return (
     <>
@@ -30,7 +30,6 @@ const Home = () => {
 
         <button
           className="w-25 rounded-5 p-2 btnCome text-light fs-5 position-fixed bottom-0 end-0 m-5"
-          onClick={() => navigate("/saibamais")} // Adicione este onClick
         >
           Comece seu estudos <i className="bi bi-caret-right text-light"></i>
         </button>

@@ -1,11 +1,10 @@
 import React from 'react'
-import { useNavigate } from "react-router-dom"; // Importar o hook
 
 import logo from "../assets/logo.png";
 import celular from "../assets/celular.png";
 
 const SaibaMais = () => {
-  const navigate = useNavigate(); // Inicializar o hook
+
 
   return (
     <div className='bgsaibamais min-vh-100 text-light d-flex flex-column flex-md-row align-items-center justify-content-between overflow-hidden'>
@@ -24,7 +23,7 @@ const SaibaMais = () => {
         </h4>
         <button
           className='btnsaibamais rounded-5 py-3 px-5 text-uppercase border-0 text-light mt-3 botaosaibamais font-open-sans-bold w-75 w-md-50'
-          onClick={() => navigate("/estudar")}
+          
         >
           Saiba mais
         </button>
