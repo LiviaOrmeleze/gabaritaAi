@@ -1,16 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router";
 import raposa from "../assets/raposa.png";
 
 const Header = () => {
-  const [usuario, setUsuario] = useState(null);
-
-  useEffect(() => {
-    const userEmail = localStorage.getItem("userEmail");
-    if (userEmail) {
-      setUsuario(userEmail.split("@")[0]);  // Define o usuário logado
-    }
-  }, []);
+  const [usuario, setUsuario] = useState(localStorage.getItem("userEmail")?.split("@")[0] || null);
 
   const handleLogout = () => {
     localStorage.removeItem("userEmail"); // Remove o usuário do localStorage
@@ -18,7 +11,8 @@ const Header = () => {
   };
 
   return (
-    <header className="p-4 w-100 navbar justify-align-content-between align-items-center header">
+    <header className="p-4 w-100 navbar justify-content-between align-items-center header">
+      {/* Logo */}
       <div className="d-flex align-items-center ms-4 bgLogo rounded-5">
         <img
           className="object-fit ms-2"
@@ -29,17 +23,48 @@ const Header = () => {
         />
         <p className="m-2 fw-bold logoFonte">Gabarita.Ai</p>
       </div>
+
+      {/* Menu e Perfil */}
       <div className="d-flex justify-content-end align-items-center gap-4 me-4">
+        {/* Ícone de menu */}
+        <div className="dropdown">
+          <i
+            className="bi bi-list fs-3 text-light"
+            role="button"
+            id="dropdownMenuButton"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          ></i>
+          <ul
+            className="dropdown-menu dropdown-menu-dark dropdown-menu-end"
+            aria-labelledby="dropdownMenuButton"
+          >
+            <li>
+              <Link to="/" className="dropdown-item">
+                Página Inicial
+              </Link>
+            </li>
+            <li>
+              <Link to="/materias" className="dropdown-item">
+                Materias
+              </Link>
+            </li>
+            <li>
+              <Link to="/contato" className="dropdown-item">
+                Dicionário
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Perfil */}
         {usuario ? (
-          <span className="d-flex align-items-center gap-2 me-0 me-md-5">
-            <span className="d-none d-md-block">
-              Olá, {usuario}!
-            </span>
+          <div className="d-flex align-items-center gap-2">
+            <span className="d-none d-md-block text-light">Olá, {usuario}!</span>
             <div className="dropdown">
               <div
                 role="button"
                 className="border-0"
-                type="div"
                 id="dropdownPerfil"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -56,7 +81,11 @@ const Header = () => {
                 className="dropdown-menu dropdown-menu-dark dropdown-menu-end"
                 aria-labelledby="dropdownPerfil"
               >
-              
+                <li>
+                  <Link to="/perfil" className="dropdown-item">
+                    Perfil
+                  </Link>
+                </li>
                 <li>
                   <button
                     onClick={handleLogout}
@@ -68,7 +97,7 @@ const Header = () => {
                 </li>
               </ul>
             </div>
-          </span>
+          </div>
         ) : (
           <>
             <Link
