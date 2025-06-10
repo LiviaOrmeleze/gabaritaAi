@@ -11,6 +11,7 @@ import Materias from "./pages/Materias";
 import "./App.css";
 
 
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -31,11 +32,11 @@ import Cronograma from "./pages/Cronograma";
 const App = () => {
   return (
     <BrowserRouter>
-      <Header />
+      
       <main className="flex-grow-1 d-flex flex-column">
         <Routes>
           <Route path="/" element={<PaginaPrincipal />} />
-       
+    
           <Route path="/Dicionario" element={<Dicionario />} />
           <Route path="/Redacao" element={<Redacao />} />
 <Route path="/login" element={<Login />} />

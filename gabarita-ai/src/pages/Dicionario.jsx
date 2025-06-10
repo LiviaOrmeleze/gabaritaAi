@@ -1,6 +1,6 @@
 import React from "react";
 import livros from "../assets/livros1.png";
-import logo from "../assets/Raposa.png";
+import logo from "../assets/raposa.png";
 import ListaDicionario from "../components/ListaDicionario";
 
 const Dicionario = () => {
