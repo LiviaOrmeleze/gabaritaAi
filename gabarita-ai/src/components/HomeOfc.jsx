@@ -26,7 +26,7 @@ const HomeOfc = () => {
         </div>
       </div>
 
-      <button className="w-25 rounded-5 p-2 btnCome text-light fs-5 position-fixed bottom-0 end-0 m-5">
+      <button className="w-25 rounded-5 p-2 btnCome text-light fs-5 position-absolute bottom-0 end-0 m-5">
         Comece seu estudos <i className="bi bi-caret-right text-light"></i>
       </button>
 
