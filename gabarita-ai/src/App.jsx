@@ -9,7 +9,6 @@ import Desempenho from "./pages/Desempenho";
 import Materias from "./pages/Materias";
 import Disciplinas from "./pages/Disciplinas";
 
-
 import "./App.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -26,7 +25,6 @@ import Prepositivos from "./pages/Prepositivos";
 
 import Conheca from "./pages/Conheca";
 import Cronograma from "./pages/Cronograma";
-// import MateriaEspecifica from "./pages/MateriaEspecifica";
 
 const App = () => {
   return (
@@ -55,7 +53,6 @@ const App = () => {
           <Route path="/conhecanossosite" element={<Conheca />} />
           <Route path="/disciplinas" element={<Disciplinas />} />
           <Route path="/cronograma" element={<Cronograma />} />
-          {/* <Route path="/materiaespecifica" element={<MateriaEspecifica />} /> */}
         </Routes>
       </main>
     </BrowserRouter>

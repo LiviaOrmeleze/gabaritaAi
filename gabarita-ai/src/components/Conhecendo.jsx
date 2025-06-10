@@ -13,6 +13,7 @@ const Conhecendo = () => {
         imagem: caixabranca,
         subtitulo: "Teste seu nível",
         texto: "Para avaliar suas habilidades nas principais disciplinas e identificar os tópicos que precisam de mais atenção. Aqui, você terá uma visão clara do seu desempenho!",
+        link: "/disciplinas",
       },
       {
         id: 2,
