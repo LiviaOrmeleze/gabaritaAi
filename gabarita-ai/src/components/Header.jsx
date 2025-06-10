@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router";
 import raposa from "../assets/raposa.png";
+import Menu from "./Menu";
 
 const Header = () => {
-  const [usuario, setUsuario] = useState(localStorage.getItem("userEmail")?.split("@")[0] || null);
+  const [usuario, setUsuario] = useState(
+    localStorage.getItem("userEmail")?.split("@")[0] || null
+  );
 
   const handleLogout = () => {
     localStorage.removeItem("userEmail"); // Remove o usuário do localStorage
@@ -24,43 +27,13 @@ const Header = () => {
         <p className="m-2 fw-bold logoFonte">Gabarita.Ai</p>
       </div>
 
-      {/* Menu e Perfil */}
-      <div className="d-flex justify-content-end align-items-center gap-4 me-4">
-        {/* Ícone de menu */}
-        <div className="dropdown">
-          <i
-            className="bi bi-list fs-3 text-light"
-            role="button"
-            id="dropdownMenuButton"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          ></i>
-          <ul
-            className="dropdown-menu dropdown-menu-dark dropdown-menu-end"
-            aria-labelledby="dropdownMenuButton"
-          >
-            <li>
-              <Link to="/" className="dropdown-item">
-                Página Inicial
-              </Link>
-            </li>
-            <li>
-              <Link to="/materias" className="dropdown-item">
-                Materias
-              </Link>
-            </li>
-            <li>
-              <Link to="/contato" className="dropdown-item">
-                Dicionário
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        {/* Perfil */}
+      {/* Perfil */}
+      <div className="d-flex gap-5">
         {usuario ? (
           <div className="d-flex align-items-center gap-2">
-            <span className="d-none d-md-block text-light">Olá, {usuario}!</span>
+            <span className="d-none d-md-block text-light">
+              Olá, {usuario}!
+            </span>
             <div className="dropdown">
               <div
                 role="button"
@@ -114,6 +87,8 @@ const Header = () => {
             </Link>
           </>
         )}
+        {/* Menu e Perfil */}
+        <Menu />
       </div>
     </header>
   );

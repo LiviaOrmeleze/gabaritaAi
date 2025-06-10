@@ -4,7 +4,6 @@ import "../App.css";
 import { useMateriasController } from "../components/MateriasController";
 
 // Importação das imagens
-import raposa from "../assets/raposa.png";
 import biologia from "../assets/biologia.png";
 import fisica from "../assets/fisica.png";
 import quimica from "../assets/quimica.png";
@@ -19,6 +18,7 @@ import ingles from "../assets/ingles.png";
 import espanhol from "../assets/espanhol.png";
 import matematica from "../assets/matematica .png"; // Corrigido o espaço no nome do arquivo
 import livros from "../assets/livros.png"; // Imagem de livros
+import NewHeader from "../components/NewHeader";
 
 const Materias = () => {
   const { abrirMateria } = useMateriasController(); // Usando o controller
@@ -48,10 +48,7 @@ const Materias = () => {
   return (
     <>
       {/* Topo */}
-      <div className="topo-container">
-        <img src={raposa} alt="Raposa" className="raposa" />
-        <h1 className="titulo-logo">GABARITA AI</h1>
-      </div>
+      < NewHeader />
 
       <div className="container">
         {/* Faixa Laranja Responsiva */}

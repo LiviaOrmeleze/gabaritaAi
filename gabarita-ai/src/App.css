@@ -1,15 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+:root {
+  --font-family-primary: 'Quicksand', sans-serif;
+  --font-family-secondary:'Open Sans', sans-serif;
+  --font-family-tertiary: 'Rajdhani', sans-serif;
+
+}
 
 body {
-  background-color: #e7d7c9;
   margin: 0;
   padding: 0;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-family-primary) !important;
+  background: var(--pastel-orange-100)!important;
   color: #000000;
   min-height: 100vh;
 }
+
+
 
 /* Ajuste do topo */
 .topo-container {
@@ -155,25 +166,12 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 
-/* Aplicar a fonte globalmente */
-:root {
-    --font-family-primary: 'Quicksand', sans-serif;
-    --font-family-secondary:'Open Sans', sans-serif;
-    --font-family-tertiary: 'Rajdhani', sans-serif;
 
-}
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-family-primary) !important;
-    background: var(--pastel-orange-100)!important;
-  }
+
+
 
 
  .container {
@@ -259,7 +257,7 @@ body {
 
 .infDiRe{
     width: 500px;
-    height: 600px;
+    height: 500px;
 }
 
 .fonteBg{
