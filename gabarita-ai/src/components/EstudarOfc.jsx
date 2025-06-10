@@ -41,14 +41,17 @@ const conteudos = [
   },
 ];
 
-const Estudar = () => (
+const EstudarOfc = () => (
   <div
-    className="container-fluid py-4 min-vh-100"
+    className="container-fluid min-vh-100 d-flex flex-column align-items-center justify-content-center py-4"
     style={{ backgroundColor: "#e7d7c9", fontFamily: "Poppins, sans-serif" }}
   >
     {/* TÍTULO PRINCIPAL */}
     <div className="text-center mb-4">
-      <h1 className="fw-bold display-4" style={{ color: "#4e342e", fontSize: "2.8rem" }}>
+      <h1
+        className="fw-bold display-4"
+        style={{ color: "#4e342e", fontSize: "2.8rem" }}
+      >
         ESTUDE COM A GENTE!
       </h1>
       <p className="lead fs-4" style={{ color: "#4e342e", fontSize: "1.4rem" }}>
@@ -57,50 +60,67 @@ const Estudar = () => (
     </div>
 
     {/* CONTEÚDOS */}
-    <div className="container">
+    <div className="container d-flex flex-wrap justify-content-center">
       <div className="row g-4">
         {conteudos.map((item, i) => (
           <div className="col-lg-4 col-md-6 col-sm-12" key={i}>
-            <div className="card shadow-lg h-100 text-center" style={{ borderRadius: "15px" }}>
-              <div className="card-header text-white d-flex align-items-center justify-content-center" style={{ backgroundColor: "#df6d14" }}>
+            <div
+              className="card shadow-lg h-100 text-center"
+              style={{ borderRadius: "15px" }}
+            >
+              <div
+                className="card-header text-white d-flex align-items-center justify-content-center"
+                style={{ backgroundColor: "#df6d14" }}
+              >
                 <img
                   src={imagens[i]}
                   alt={item.titulo}
                   className="me-3"
-                  style={{ width: "60px", height: "60px", objectFit: "contain" }}
+                  style={{
+                    width: "60px",
+                    height: "60px",
+                    objectFit: "contain",
+                  }}
                 />
-                <h4 className="fw-bold m-0 flex-grow-1" style={{ fontSize: "1.6rem" }}>{item.titulo}</h4>
+                <h4
+                  className="fw-bold m-0 flex-grow-1"
+                  style={{ fontSize: "1.6rem" }}
+                >
+                  {item.titulo}
+                </h4>
               </div>
               <div className="card-body d-flex flex-column justify-content-center text-center">
-                <p className="text-dark" style={{ color: "#4e342e", fontSize: "1.1rem" }}>{item.texto}</p>
+                <p
+                  className="text-dark"
+                  style={{ color: "#4e342e", fontSize: "1.1rem" }}
+                >
+                  {item.texto}
+                </p>
               </div>
             </div>
           </div>
         ))}
       </div>
+    </div>
 
-      {/* MENSAGEM FINAL */}
-      <div className="text-center mt-5">
-        <h4 className="fw-bold fs-3" style={{ color: "#4e342e", fontSize: "1.6rem" }}>
-          Aproveite ao Máximo!
-        </h4>
-        <p 
-          className="fs-6 mx-auto" 
-          style={{ 
-            maxWidth: "1000px", 
-            color: "#4e342e", 
-            fontSize: "0.9rem", 
-            whiteSpace: "nowrap", 
-            overflow: "hidden", 
-            textOverflow: "ellipsis" 
-          }}
-        >
-          Monitore seu progresso e melhore seu desempenho com resumos e atividades personalizadas. 
-          Use os recursos disponíveis para otimizar seus estudos e alcançar melhores resultados.
-        </p>
-      </div>
+    {/* MENSAGEM FINAL */}
+    <div className="text-center mt-5">
+      <h4
+        className="fw-bold fs-3"
+        style={{ color: "#4e342e", fontSize: "1.6rem" }}
+      >
+        Aproveite ao Máximo!
+      </h4>
+      <p
+        className="fs-6 mx-auto"
+        style={{ maxWidth: "1000px", color: "#4e342e", fontSize: "0.9rem" }}
+      >
+        Monitore seu progresso e melhore seu desempenho com resumos e atividades
+        personalizadas. Use os recursos disponíveis para otimizar seus estudos e
+        alcançar melhores resultados.
+      </p>
     </div>
   </div>
 );
 
-export default Estudar;
+export default EstudarOfc;
