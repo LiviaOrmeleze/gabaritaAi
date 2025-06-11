@@ -1,7 +1,7 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 // Tipos de matérias do Ensino Médio
 const subjectInfo = {
@@ -77,7 +77,7 @@ const subjectInfo = {
     color: "secondary",
     description: "Artes visuais, música, dança e teatro",
   },
-};
+}
 
 // Banco de questões para todas as matérias
 const questions = [
@@ -119,20 +119,14 @@ const questions = [
   {
     id: 5,
     question: "Quem escreveu 'Dom Casmurro'?",
-    options: [
-      "José de Alencar",
-      "Machado de Assis",
-      "Clarice Lispector",
-      "Guimarães Rosa",
-    ],
+    options: ["José de Alencar", "Machado de Assis", "Clarice Lispector", "Guimarães Rosa"],
     correctAnswer: 1,
     difficulty: "medium",
     subject: "portugues",
   },
   {
     id: 6,
-    question:
-      "Qual figura de linguagem está presente em 'A vida é uma nuvem que voa'?",
+    question: "Qual figura de linguagem está presente em 'A vida é uma nuvem que voa'?",
     options: ["Metonímia", "Metáfora", "Hipérbole", "Pleonasmo"],
     correctAnswer: 1,
     difficulty: "hard",
@@ -318,12 +312,7 @@ const questions = [
   {
     id: 22,
     question: "Quem foi Sócrates?",
-    options: [
-      "Um filósofo romano",
-      "Um filósofo grego",
-      "Um imperador grego",
-      "Um matemático egípcio",
-    ],
+    options: ["Um filósofo romano", "Um filósofo grego", "Um imperador grego", "Um matemático egípcio"],
     correctAnswer: 1,
     difficulty: "easy",
     subject: "filosofia",
@@ -344,12 +333,7 @@ const questions = [
   {
     id: 24,
     question: "O que é o imperativo categórico de Kant?",
-    options: [
-      "Um princípio político",
-      "Um princípio moral universal",
-      "Uma lei científica",
-      "Um método matemático",
-    ],
+    options: ["Um princípio político", "Um princípio moral universal", "Uma lei científica", "Um método matemático"],
     correctAnswer: 1,
     difficulty: "hard",
     subject: "filosofia",
@@ -410,8 +394,7 @@ const questions = [
   },
   {
     id: 30,
-    question:
-      "O que significa a expressão idiomática 'to hit the nail on the head'?",
+    question: "O que significa a expressão idiomática 'to hit the nail on the head'?",
     options: [
       "Machucar-se acidentalmente",
       "Acertar precisamente",
@@ -463,20 +446,14 @@ const questions = [
   {
     id: 34,
     question: "Quem pintou a 'Mona Lisa'?",
-    options: [
-      "Vincent van Gogh",
-      "Leonardo da Vinci",
-      "Pablo Picasso",
-      "Michelangelo",
-    ],
+    options: ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Michelangelo"],
     correctAnswer: 1,
     difficulty: "easy",
     subject: "artes",
   },
   {
     id: 35,
-    question:
-      "Qual movimento artístico tem Salvador Dalí como um de seus principais representantes?",
+    question: "Qual movimento artístico tem Salvador Dalí como um de seus principais representantes?",
     options: ["Cubismo", "Impressionismo", "Surrealismo", "Expressionismo"],
     correctAnswer: 2,
     difficulty: "medium",
@@ -495,24 +472,12 @@ const questions = [
     difficulty: "hard",
     subject: "artes",
   },
-];
+]
 
 // Definição dos níveis com critérios mais justos
 const levelDefinitions = [
-  {
-    min: 0,
-    max: 30,
-    level: "Iniciante",
-    color: "text-danger",
-    description: "Conhecimentos básicos iniciais",
-  },
-  {
-    min: 31,
-    max: 50,
-    level: "Básico",
-    color: "text-warning",
-    description: "Fundamentos estabelecidos",
-  },
+  { min: 0, max: 30, level: "Iniciante", color: "text-danger", description: "Conhecimentos básicos iniciais" },
+  { min: 31, max: 50, level: "Básico", color: "text-warning", description: "Fundamentos estabelecidos" },
   {
     min: 51,
     max: 65,
@@ -534,13 +499,7 @@ const levelDefinitions = [
     color: "text-secondary",
     description: "Conhecimento sólido e abrangente",
   },
-  {
-    min: 86,
-    max: 95,
-    level: "Avançado",
-    color: "text-dark",
-    description: "Domínio amplo e profundo",
-  },
+  { min: 86, max: 95, level: "Avançado", color: "text-dark", description: "Domínio amplo e profundo" },
   {
     min: 96,
     max: 100,
@@ -548,140 +507,123 @@ const levelDefinitions = [
     color: "text-success",
     description: "Excelência e maestria nos conteúdos",
   },
-];
+]
 
 export default function Disciplina() {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [selectedAnswers, setSelectedAnswers] = useState(
-    Array(questions.length).fill(undefined)
-  );
-  const [showResults, setShowResults] = useState(false);
-  const [testStarted, setTestStarted] = useState(false);
-  const [activeTab, setActiveTab] = useState("geral");
+  const [currentQuestion, setCurrentQuestion] = useState(0)
+  const [selectedAnswers, setSelectedAnswers] = useState(Array(questions.length).fill(undefined))
+  const [showResults, setShowResults] = useState(false)
+  const [testStarted, setTestStarted] = useState(false)
+  const [activeTab, setActiveTab] = useState("geral")
 
   const handleAnswerSelect = (answerIndex) => {
-    const newAnswers = [...selectedAnswers];
-    newAnswers[currentQuestion] = answerIndex;
-    setSelectedAnswers(newAnswers);
-  };
+    const newAnswers = [...selectedAnswers]
+    newAnswers[currentQuestion] = answerIndex
+    setSelectedAnswers(newAnswers)
+  }
 
   const handleNext = () => {
     if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
+      setCurrentQuestion(currentQuestion + 1)
     } else {
-      setShowResults(true);
+      setShowResults(true)
     }
-  };
+  }
 
   const handlePrevious = () => {
     if (currentQuestion > 0) {
-      setCurrentQuestion(currentQuestion - 1);
+      setCurrentQuestion(currentQuestion - 1)
     }
-  };
+  }
 
   const calculateScoreBySubject = () => {
-    const subjectScores = {};
+    const subjectScores = {}
 
     // Inicializar contadores para cada matéria
     Object.keys(subjectInfo).forEach((subject) => {
-      subjectScores[subject] = { correct: 0, total: 0, questions: [] };
-    });
+      subjectScores[subject] = { correct: 0, total: 0, questions: [] }
+    })
 
     // Calcular pontuações por matéria
     questions.forEach((question, index) => {
-      const subject = question.subject;
-      subjectScores[subject].total++;
-      subjectScores[subject].questions.push(question);
+      const subject = question.subject
+      subjectScores[subject].total++
+      subjectScores[subject].questions.push(question)
 
       if (selectedAnswers[index] === question.correctAnswer) {
-        subjectScores[subject].correct++;
+        subjectScores[subject].correct++
       }
-    });
+    })
 
-    return subjectScores;
-  };
+    return subjectScores
+  }
 
   const getLevel = (percentage) => {
-    const level = levelDefinitions.find(
-      (def) => percentage >= def.min && percentage <= def.max
-    );
-    return level || levelDefinitions[0];
-  };
+    const level = levelDefinitions.find((def) => percentage >= def.min && percentage <= def.max)
+    return level || levelDefinitions[0]
+  }
 
   const calculateOverallScore = () => {
-    let score = 0;
-    let answered = 0;
+    let score = 0
+    let answered = 0
 
     questions.forEach((_, index) => {
       if (selectedAnswers[index] !== undefined) {
-        answered++;
+        answered++
         if (selectedAnswers[index] === questions[index].correctAnswer) {
-          score++;
+          score++
         }
       }
-    });
+    })
 
-    return { score, answered };
-  };
+    return { score, answered }
+  }
 
   const resetTest = () => {
-    setCurrentQuestion(0);
-    setSelectedAnswers(Array(questions.length).fill(undefined));
-    setShowResults(false);
-    setTestStarted(false);
-    setActiveTab("geral");
-  };
+    setCurrentQuestion(0)
+    setSelectedAnswers(Array(questions.length).fill(undefined))
+    setShowResults(false)
+    setTestStarted(false)
+    setActiveTab("geral")
+  }
 
-  const progress = ((currentQuestion + 1) / questions.length) * 100;
+  const progress = ((currentQuestion + 1) / questions.length) * 100
 
   // Agrupar questões por matéria para a tela inicial
-  const subjectQuestionCounts = Object.keys(subjectInfo).reduce(
-    (acc, subject) => {
-      acc[subject] = questions.filter((q) => q.subject === subject).length;
-      return acc;
-    },
-    {}
-  );
+  const subjectQuestionCounts = Object.keys(subjectInfo).reduce((acc, subject) => {
+    acc[subject] = questions.filter((q) => q.subject === subject).length
+    return acc
+  }, {})
 
   if (!testStarted) {
     return (
       <div className="min-vh-100 bg-light d-flex align-items-center justify-content-center p-4">
-        <div
-          className="card shadow-lg"
-          style={{ maxWidth: "800px", width: "100%" }}
-        >
+        <div className="card shadow-lg" style={{ maxWidth: "800px", width: "100%" }}>
           <div className="card-header text-center bg-primary text-white">
             <div className="mb-3">
               <span className="display-4">🏆</span>
             </div>
-            <h1 className="card-title h2 mb-2">
-              Teste de Nível - Ensino Médio
-            </h1>
-            <p className="mb-0">
-              Avalie seus conhecimentos em todas as matérias do Ensino Médio
-            </p>
+            <h1 className="card-title h2 mb-2">Teste de Nível - Ensino Médio</h1>
+            <p className="mb-0">Avalie seus conhecimentos em todas as matérias do Ensino Médio</p>
           </div>
           <div className="card-body">
             <div className="alert alert-info mb-4">
               <h5 className="alert-heading">Instruções:</h5>
               <ul className="mb-0 small">
-                <li>
-                  O teste contém {questions.length} questões de 12 matérias
-                  diferentes
-                </li>
+                <li>O teste contém {questions.length} questões de 12 matérias diferentes</li>
                 <li>Cada questão tem apenas uma resposta correta</li>
                 <li>Você pode navegar entre as questões</li>
                 <li>Ao final, você receberá seu nível geral e por matéria</li>
                 <li>
-                  Os níveis são: Iniciante, Básico, Intermediário Inicial,
-                  Intermediário, Intermediário Avançado, Avançado e Especialista
+                  Os níveis são: Iniciante, Básico, Intermediário Inicial, Intermediário, Intermediário Avançado,
+                  Avançado e Especialista
                 </li>
               </ul>
             </div>
 
             <div className="row g-3 mb-4">
               {Object.entries(subjectInfo).map(([key, info]) => {
-                const count = subjectQuestionCounts[key] || 0;
+                const count = subjectQuestionCounts[key] || 0
                 return (
                   <div key={key} className="col-6 col-md-4 col-lg-3">
                     <div className="card h-100 text-center border-2">
@@ -692,7 +634,7 @@ export default function Disciplina() {
                       </div>
                     </div>
                   </div>
-                );
+                )
               })}
             </div>
 
@@ -702,38 +644,31 @@ export default function Disciplina() {
                 {levelDefinitions.map((level) => (
                   <div key={level.level} className="col-md-6 mb-1">
                     <small>
-                      <span className={`fw-bold ${level.color}`}>●</span>{" "}
-                      {level.level} ({level.min}-{level.max}%)
+                      <span className={`fw-bold ${level.color}`}>●</span> {level.level} ({level.min}-{level.max}%)
                     </small>
                   </div>
                 ))}
               </div>
             </div>
 
-            <button
-              onClick={() => setTestStarted(true)}
-              className="btn btn-primary btn-lg w-100"
-            >
+            <button onClick={() => setTestStarted(true)} className="btn btn-primary btn-lg w-100">
               Iniciar Teste
             </button>
           </div>
         </div>
       </div>
-    );
+    )
   }
 
   if (showResults) {
-    const subjectScores = calculateScoreBySubject();
-    const { score, answered } = calculateOverallScore();
-    const percentage = answered > 0 ? Math.round((score / answered) * 100) : 0;
-    const { level, color, description } = getLevel(percentage);
+    const subjectScores = calculateScoreBySubject()
+    const { score, answered } = calculateOverallScore()
+    const percentage = answered > 0 ? Math.round((score / answered) * 100) : 0
+    const { level, color, description } = getLevel(percentage)
 
     return (
       <div className="min-vh-100 bg-light d-flex align-items-center justify-content-center p-4">
-        <div
-          className="card shadow-lg"
-          style={{ maxWidth: "900px", width: "100%" }}
-        >
+        <div className="card shadow-lg" style={{ maxWidth: "900px", width: "100%" }}>
           <div className="card-header text-center bg-success text-white">
             <div className="mb-3">
               <span className="display-4">🏆</span>
@@ -743,16 +678,11 @@ export default function Disciplina() {
           <div className="card-body">
             {/* Resultado Geral */}
             <div className="text-center bg-primary bg-opacity-10 p-4 rounded mb-4">
-              <div className="display-1 fw-bold text-primary mb-2">
-                {percentage}%
-              </div>
-              <div className={`h3 fw-bold ${color} mb-2`}>
-                Nível Geral: {level}
-              </div>
+              <div className="display-1 fw-bold text-primary mb-2">{percentage}%</div>
+              <div className={`h3 fw-bold ${color} mb-2`}>Nível Geral: {level}</div>
               <p className="text-muted">{description}</p>
               <div className="h5 text-dark">
-                <span className="fw-bold">{score}</span> de {answered} questões
-                corretas
+                <span className="fw-bold">{score}</span> de {answered} questões corretas
               </div>
             </div>
 
@@ -760,9 +690,7 @@ export default function Disciplina() {
             <ul className="nav nav-tabs mb-3">
               <li className="nav-item">
                 <button
-                  className={`nav-link ${
-                    activeTab === "geral" ? "active" : ""
-                  }`}
+                  className={`nav-link ${activeTab === "geral" ? "active" : ""}`}
                   onClick={() => setActiveTab("geral")}
                 >
                   Desempenho por Matéria
@@ -770,9 +698,7 @@ export default function Disciplina() {
               </li>
               <li className="nav-item">
                 <button
-                  className={`nav-link ${
-                    activeTab === "detalhes" ? "active" : ""
-                  }`}
+                  className={`nav-link ${activeTab === "detalhes" ? "active" : ""}`}
                   onClick={() => setActiveTab("detalhes")}
                 >
                   Revisão Detalhada
@@ -783,83 +709,54 @@ export default function Disciplina() {
             {activeTab === "geral" && (
               <div className="row g-3 mb-4">
                 {Object.entries(subjectScores).map(([subjectKey, score]) => {
-                  const subjectData = subjectInfo[subjectKey];
-                  const subjectPercentage =
-                    score.total > 0
-                      ? Math.round((score.correct / score.total) * 100)
-                      : 0;
-                  const subjectLevel = getLevel(subjectPercentage);
+                  const subjectData = subjectInfo[subjectKey]
+                  const subjectPercentage = score.total > 0 ? Math.round((score.correct / score.total) * 100) : 0
+                  const subjectLevel = getLevel(subjectPercentage)
 
                   return (
                     <div key={subjectKey} className="col-md-6">
                       <div className="card h-100">
-                        <div
-                          className={`card-header bg-${subjectData.color} text-white p-2`}
-                        >
+                        <div className={`card-header bg-${subjectData.color} text-white p-2`}>
                           <div className="d-flex align-items-center">
                             <span className="me-2">{subjectData.icon}</span>
                             <div>
                               <h6 className="mb-0">{subjectData.name}</h6>
-                              <small className="opacity-75">
-                                {subjectData.description}
-                              </small>
+                              <small className="opacity-75">{subjectData.description}</small>
                             </div>
                           </div>
                         </div>
                         <div className="card-body">
                           <div className="d-flex justify-content-between align-items-center mb-2">
-                            <span className="h4 fw-bold">
-                              {subjectPercentage}%
-                            </span>
-                            <span
-                              className={`badge ${subjectLevel.color.replace(
-                                "text-",
-                                "bg-"
-                              )}`}
-                            >
+                            <span className="h4 fw-bold">{subjectPercentage}%</span>
+                            <span className={`badge ${subjectLevel.color.replace("text-", "bg-")}`}>
                               {subjectLevel.level}
                             </span>
                           </div>
-                          <div
-                            className="progress mb-2"
-                            style={{ height: "8px" }}
-                          >
-                            <div
-                              className="progress-bar"
-                              style={{ width: `${subjectPercentage}%` }}
-                            ></div>
+                          <div className="progress mb-2" style={{ height: "8px" }}>
+                            <div className="progress-bar" style={{ width: `${subjectPercentage}%` }}></div>
                           </div>
                           <div className="d-flex justify-content-between">
                             <small className="text-muted">
                               {score.correct}/{score.total} corretas
                             </small>
-                            <button
-                              onClick={() => setActiveTab("detalhes")}
-                              className="btn btn-link btn-sm p-0"
-                            >
+                            <button onClick={() => setActiveTab("detalhes")} className="btn btn-link btn-sm p-0">
                               Ver detalhes
                             </button>
                           </div>
                         </div>
                       </div>
                     </div>
-                  );
+                  )
                 })}
               </div>
             )}
 
             {activeTab === "detalhes" && (
-              <div
-                className="mb-4"
-                style={{ maxHeight: "500px", overflowY: "auto" }}
-              >
+              <div className="mb-4" style={{ maxHeight: "500px", overflowY: "auto" }}>
                 {Object.entries(subjectScores).map(([subjectKey, score]) => {
-                  const subjectData = subjectInfo[subjectKey];
-                  const subjectPercentage =
-                    score.total > 0
-                      ? Math.round((score.correct / score.total) * 100)
-                      : 0;
-                  const subjectLevel = getLevel(subjectPercentage);
+                  const subjectData = subjectInfo[subjectKey]
+                  const subjectPercentage = score.total > 0 ? Math.round((score.correct / score.total) * 100) : 0
+                  const subjectLevel = getLevel(subjectPercentage)
 
                   return (
                     <div key={subjectKey} className="card mb-3">
@@ -869,35 +766,24 @@ export default function Disciplina() {
                             <span className="me-2">{subjectData.icon}</span>
                             <h6 className="mb-0">{subjectData.name}</h6>
                           </div>
-                          <span
-                            className={`badge ${subjectLevel.color.replace(
-                              "text-",
-                              "bg-"
-                            )}`}
-                          >
+                          <span className={`badge ${subjectLevel.color.replace("text-", "bg-")}`}>
                             {subjectLevel.level} ({subjectPercentage}%)
                           </span>
                         </div>
                       </div>
                       <div className="card-body">
                         {score.questions.map((question) => {
-                          const questionIndex = questions.findIndex(
-                            (q) => q.id === question.id
-                          );
-                          const userAnswer = selectedAnswers[questionIndex];
-                          const isCorrect =
-                            userAnswer === question.correctAnswer;
+                          const questionIndex = questions.findIndex((q) => q.id === question.id)
+                          const userAnswer = selectedAnswers[questionIndex]
+                          const isCorrect = userAnswer === question.correctAnswer
                           const difficultyColors = {
                             easy: "success",
                             medium: "warning",
                             hard: "danger",
-                          };
+                          }
 
                           return (
-                            <div
-                              key={question.id}
-                              className="d-flex align-items-start mb-3 p-2 bg-light rounded"
-                            >
+                            <div key={question.id} className="d-flex align-items-start mb-3 p-2 bg-light rounded">
                               <div className="me-3 mt-1">
                                 {isCorrect ? (
                                   <span className="text-success">✓</span>
@@ -907,98 +793,72 @@ export default function Disciplina() {
                               </div>
                               <div className="flex-grow-1">
                                 <div className="d-flex justify-content-between">
-                                  <p className="mb-1 fw-medium">
-                                    {question.question}
-                                  </p>
-                                  <span
-                                    className={`badge bg-${
-                                      difficultyColors[question.difficulty]
-                                    } ms-2`}
-                                  >
+                                  <p className="mb-1 fw-medium">{question.question}</p>
+                                  <span className={`badge bg-${difficultyColors[question.difficulty]} ms-2`}>
                                     {question.difficulty === "easy"
                                       ? "Fácil"
                                       : question.difficulty === "medium"
-                                      ? "Médio"
-                                      : "Difícil"}
+                                        ? "Médio"
+                                        : "Difícil"}
                                   </span>
                                 </div>
                                 <p className="mb-1 small text-success">
-                                  Resposta correta:{" "}
-                                  {question.options[question.correctAnswer]}
+                                  Resposta correta: {question.options[question.correctAnswer]}
                                 </p>
                                 {!isCorrect && userAnswer !== undefined && (
-                                  <p className="mb-0 small text-danger">
-                                    Sua resposta: {question.options[userAnswer]}
-                                  </p>
+                                  <p className="mb-0 small text-danger">Sua resposta: {question.options[userAnswer]}</p>
                                 )}
                               </div>
                             </div>
-                          );
+                          )
                         })}
                       </div>
                     </div>
-                  );
+                  )
                 })}
               </div>
             )}
 
-            <button
-              onClick={resetTest}
-              className="btn btn-primary btn-lg w-100"
-            >
+            <button onClick={resetTest} className="btn btn-primary btn-lg w-100">
               🔄 Fazer Teste Novamente
             </button>
           </div>
         </div>
       </div>
-    );
+    )
   }
 
-  const question = questions[currentQuestion];
-  const subjectData = subjectInfo[question.subject];
+  const question = questions[currentQuestion]
+  const subjectData = subjectInfo[question.subject]
 
   const difficultyColors = {
     easy: "success",
     medium: "warning",
     hard: "danger",
-  };
+  }
 
-  const answeredCount = selectedAnswers.filter((a) => a !== undefined).length;
+  const answeredCount = selectedAnswers.filter((a) => a !== undefined).length
 
   return (
     <div className="min-vh-100 bg-light d-flex align-items-center justify-content-center p-4">
-      <div
-        className="card shadow-lg"
-        style={{ maxWidth: "700px", width: "100%" }}
-      >
+      <div className="card shadow-lg" style={{ maxWidth: "700px", width: "100%" }}>
         <div className="card-header">
           <div className="d-flex justify-content-between align-items-center mb-3">
             <small className="text-muted">
               Questão {currentQuestion + 1} de {questions.length}
             </small>
             <div className="d-flex align-items-center gap-2">
-              <span
-                className={`badge bg-${subjectData.color} d-flex align-items-center`}
-              >
+              <span className={`badge bg-${subjectData.color} d-flex align-items-center`}>
                 <span className="me-1">{subjectData.icon}</span>
                 {subjectData.name}
               </span>
-              <span
-                className={`badge bg-${difficultyColors[question.difficulty]}`}
-              >
-                {question.difficulty === "easy"
-                  ? "Fácil"
-                  : question.difficulty === "medium"
-                  ? "Médio"
-                  : "Difícil"}
+              <span className={`badge bg-${difficultyColors[question.difficulty]}`}>
+                {question.difficulty === "easy" ? "Fácil" : question.difficulty === "medium" ? "Médio" : "Difícil"}
               </span>
             </div>
           </div>
           <div className="progress mb-3" style={{ height: "8px" }}>
-            <div
-              className="progress-bar"
-              style={{ width: `${progress}%` }}
-            ></div>
+            <div className="progress-bar" style={{ width: `${progress}%` }}></div>
           </div>
           <h5 className="card-title">{question.question}</h5>
         </div>
@@ -1009,9 +869,7 @@ export default function Disciplina() {
                 key={index}
                 onClick={() => handleAnswerSelect(index)}
                 className={`btn text-start p-3 ${
-                  selectedAnswers[currentQuestion] === index
-                    ? "btn-primary"
-                    : "btn-outline-secondary"
+                  selectedAnswers[currentQuestion] === index ? "btn-primary" : "btn-outline-secondary"
                 }`}
               >
                 <div className="d-flex align-items-center">
@@ -1024,10 +882,7 @@ export default function Disciplina() {
                     style={{ width: "24px", height: "24px" }}
                   >
                     {selectedAnswers[currentQuestion] === index && (
-                      <div
-                        className="bg-primary rounded-circle"
-                        style={{ width: "8px", height: "8px" }}
-                      ></div>
+                      <div className="bg-primary rounded-circle" style={{ width: "8px", height: "8px" }}></div>
                     )}
                   </div>
                   <span>{option}</span>
@@ -1037,11 +892,7 @@ export default function Disciplina() {
           </div>
 
           <div className="d-flex justify-content-between align-items-center">
-            <button
-              className="btn btn-outline-secondary"
-              onClick={handlePrevious}
-              disabled={currentQuestion === 0}
-            >
+            <button className="btn btn-outline-secondary" onClick={handlePrevious} disabled={currentQuestion === 0}>
               Anterior
             </button>
             <small className="text-muted">
@@ -1052,13 +903,11 @@ export default function Disciplina() {
               onClick={handleNext}
               disabled={selectedAnswers[currentQuestion] === undefined}
             >
-              {currentQuestion === questions.length - 1
-                ? "Finalizar"
-                : "Próxima"}
+              {currentQuestion === questions.length - 1 ? "Finalizar" : "Próxima"}
             </button>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

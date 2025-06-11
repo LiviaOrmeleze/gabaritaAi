@@ -1,7 +1,7 @@
-"use client"
-import ResultadoGeral from "./ResultadoGeral"
-import DesempenhoPorMateria from "./DesempenhoPorMateria"
-import RevisaoDetalhada from "./RevisaoDetalhada"
+"use client";
+import ResultadoGeral from "./ResultadoGeral";
+import DesempenhoPorMateria from "./DesempenhoPorMateria";
+import RevisaoDetalhada from "./RevisaoDetalhada";
 
 const TelaResultados = ({
   selectedAnswers,
@@ -14,62 +14,72 @@ const TelaResultados = ({
   onBackToStart,
 }) => {
   const calculateScoreBySubject = () => {
-    const subjectScores = {}
+    const subjectScores = {};
 
     // Inicializar contadores para cada matéria
     Object.keys(subjectInfo).forEach((subject) => {
-      subjectScores[subject] = { correct: 0, total: 0, questions: [] }
-    })
+      subjectScores[subject] = { correct: 0, total: 0, questions: [] };
+    });
 
     // Calcular pontuações por matéria
     questions.forEach((question, index) => {
-      const subject = question.subject
-      subjectScores[subject].total++
-      subjectScores[subject].questions.push(question)
+      const subject = question.subject;
+      subjectScores[subject].total++;
+      subjectScores[subject].questions.push(question);
 
       if (selectedAnswers[index] === question.correctAnswer) {
-        subjectScores[subject].correct++
+        subjectScores[subject].correct++;
       }
-    })
+    });
 
-    return subjectScores
-  }
+    return subjectScores;
+  };
 
   const getLevel = (percentage) => {
-    const level = levelDefinitions.find((def) => percentage >= def.min && percentage <= def.max)
-    return level || levelDefinitions[0]
-  }
+    const level = levelDefinitions.find(
+      (def) => percentage >= def.min && percentage <= def.max
+    );
+    return level || levelDefinitions[0];
+  };
 
   const calculateOverallScore = () => {
-    let score = 0
-    let answered = 0
+    let score = 0;
+    let answered = 0;
 
     questions.forEach((_, index) => {
       if (selectedAnswers[index] !== undefined) {
-        answered++
+        answered++;
         if (selectedAnswers[index] === questions[index].correctAnswer) {
-          score++
+          score++;
         }
       }
-    })
+    });
 
-    return { score, answered }
-  }
+    return { score, answered };
+  };
 
-  const subjectScores = calculateScoreBySubject()
-  const { score, answered } = calculateOverallScore()
-  const percentage = answered > 0 ? Math.round((score / answered) * 100) : 0
-  const { level, color, description } = getLevel(percentage)
+  const subjectScores = calculateScoreBySubject();
+  const { score, answered } = calculateOverallScore();
+  const percentage = answered > 0 ? Math.round((score / answered) * 100) : 0;
+  const { level, color, description } = getLevel(percentage);
 
   return (
     <div
       className="min-vh-100 d-flex align-items-center justify-content-center p-4"
       style={{ backgroundColor: "#e7d7c9" }}
     >
-      <div className="card shadow-lg" style={{ maxWidth: "900px", width: "100%" }}>
+      <div
+        className="card shadow-lg"
+        style={{ maxWidth: "900px", width: "100%" }}
+      >
         <div className="card-header text-center bg-success text-white">
           <div className="mb-3">
-            <img src="/raposa.png" alt="Raposa" className="img-fluid" style={{ width: "100px", height: "100px" }} />
+            <img
+              src="/raposa.png"
+              alt="Raposa"
+              className="img-fluid"
+              style={{ width: "100px", height: "100px" }}
+            />
           </div>
           <h1 className="card-title h2">Resultado do Teste</h1>
           <button
@@ -103,7 +113,9 @@ const TelaResultados = ({
             </li>
             <li className="nav-item">
               <button
-                className={`nav-link ${activeTab === "detalhes" ? "active" : ""}`}
+                className={`nav-link ${
+                  activeTab === "detalhes" ? "active" : ""
+                }`}
                 onClick={() => setActiveTab("detalhes")}
               >
                 Revisão Detalhada
@@ -130,13 +142,16 @@ const TelaResultados = ({
             />
           )}
 
-          <button onClick={onResetTest} className="btn btn-primary btn-lg w-100">
+          <button
+            onClick={onResetTest}
+            className="btn btn-primary btn-lg w-100"
+          >
             Fazer Teste Novamente
           </button>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default TelaResultados;

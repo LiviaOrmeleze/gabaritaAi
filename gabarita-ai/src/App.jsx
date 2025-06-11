@@ -9,7 +9,6 @@ import Desempenho from "./pages/Desempenho";
 import Materias from "./pages/Materias";
 import Disciplinas from "./pages/Disciplinas";
 
-
 import "./App.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -26,6 +25,8 @@ import Prepositivos from "./pages/Prepositivos";
 
 import Conheca from "./pages/Conheca";
 import Cronograma from "./pages/Cronograma";
+import SimuladorECorrecao from "./pages/SimuladorECorrecao";
+
 // import MateriaEspecifica from "./pages/MateriaEspecifica";
 
 const App = () => {
@@ -35,13 +36,6 @@ const App = () => {
         <Routes>
           <Route path="/" element={<PaginaPrincipal />} />
           <Route path="/Dicionario" element={<Dicionario />} />
-          <Route path="/Redacao" element={<Redacao />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/cadastro" element={<Cadastro />} />
-          <Route path="/planos" element={<Planos />} />
-          <Route path="/atualidades" element={<Atualidades />} />
-          <Route path="/desempenho" element={<Desempenho />} />
-          <Route path="/materias" element={<Materias />} />
           <Route path="/login" element={<Login />} />
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/planos" element={<Planos />} />
@@ -55,7 +49,8 @@ const App = () => {
           <Route path="/conhecanossosite" element={<Conheca />} />
           <Route path="/disciplinas" element={<Disciplinas />} />
           <Route path="/cronograma" element={<Cronograma />} />
-          {/* <Route path="/materiaespecifica" element={<MateriaEspecifica />} /> */}
+          <Route path="/redacao" element={<Redacao />} />
+          <Route path="simuladorecorrecao" element={<SimuladorECorrecao />} />
         </Routes>
       </main>
     </BrowserRouter>
