@@ -202,6 +202,9 @@ const Redacao = () => {
         </div>
       </div>
     </div>
+          </div>
+        </div>
+      </div>
   );
 };
 
