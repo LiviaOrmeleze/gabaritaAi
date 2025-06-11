@@ -17,7 +17,7 @@ import literatura from "../assets/literatura.png";
 import artes from "../assets/artes.png";
 import ingles from "../assets/ingles.png";
 import espanhol from "../assets/espanhol.png";
-import matematica from "../assets/matematica .png"; // Corrigido o espaço no nome do arquivo
+import matematica from "../assets/matematica.png";
 import livros from "../assets/livros.png"; // Imagem de livros
 
 const Materias = () => {
@@ -74,7 +74,7 @@ const Materias = () => {
                 <button
                   key={index}
                   className="materia-btn"
-                  onClick={() => abrirMateria(materia)}
+                  onClick={() => abrirMateria(materia)} // Redireciona para a página da matéria
                 >
                   <img
                     src={materia.imagem}

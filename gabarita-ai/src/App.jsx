@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Cadastro from "./pages/Cadastro";
 import PaginaPrincipal from "./pages/PaginaPrincipal";
@@ -8,6 +8,7 @@ import Atualidades from "./pages/Atualidades";
 import Desempenho from "./pages/Desempenho";
 import Materias from "./pages/Materias";
 import Disciplinas from "./pages/Disciplinas";
+import MateriaEspecificaOf from "./pages/MateriaEspecificaOf"; // Página para matérias específicas
 
 import "./App.css";
 
@@ -53,6 +54,7 @@ const App = () => {
           <Route path="/conhecanossosite" element={<Conheca />} />
           <Route path="/disciplinas" element={<Disciplinas />} />
           <Route path="/cronograma" element={<Cronograma />} />
+          <Route path="/materia/:nome" element={<MateriaEspecificaOf />} />
         </Routes>
       </main>
     </BrowserRouter>

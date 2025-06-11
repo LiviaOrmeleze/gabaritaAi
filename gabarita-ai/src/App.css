@@ -498,3 +498,8 @@ body {
   text-decoration: none; /* Remove o sublinhado */
   color: inherit; /* Herda a cor do elemento pai */
 }
+
+.fundomateriaespecifica {
+  background-color: #e7d7c9;
+}
+

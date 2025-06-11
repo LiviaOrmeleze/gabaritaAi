@@ -9,9 +9,7 @@ export const useMateriasController = () => {
   const abrirMateria = (materia) => {
     console.log(`Matéria selecionada: ${materia.nome}`);
     setMateriaSelecionada(materia); // Salva a matéria selecionada
-
-    // Navega para a página específica da matéria
-    navigate(`/materia/${materia.nome.toLowerCase()}`);
+    navigate(`/materia/${materia.nome.toLowerCase()}`); // Redireciona para a página da matéria
   };
 
   return { materiaSelecionada, abrirMateria };
