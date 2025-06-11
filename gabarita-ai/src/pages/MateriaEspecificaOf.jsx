@@ -1,19 +1,20 @@
-
-import React from 'react'
+import React from "react";
 import { useParams } from "react-router-dom";
-import MatematicaStudy from '../components/MatematicaStudy';
+import StudyContent from "../components/StudyContent";
 
-const MateriaEspecificaOf = (props) => {
-    const { nome } = useParams(); // Obtém o nome da matéria da URL
+const MateriaEspecificaOf = () => {
+  const { nome } = useParams(); // Obtém o nome da matéria da URL
 
-    return (
-      <div className="container mb-5">
-        <h3 className="mt-5 text-capitalize textocalendario titulo-materia">   Matéria / {nome}</h3>
-      <MatematicaStudy />   
-      </div>
-      
-  )
-}
+  console.log("Parâmetro nome:", nome); // Verifica o valor de nome
 
-export default MateriaEspecificaOf
+  return (
+    <div className="container mb-5">
+      <h3 className="mt-5 text-capitalize textocalendario titulo-materia">
+        Matéria / {nome}
+      </h3>
+      <StudyContent subjectName={nome} />
+    </div>
+  );
+};
 
+export default MateriaEspecificaOf;

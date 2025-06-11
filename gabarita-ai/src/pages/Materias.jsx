@@ -53,7 +53,7 @@ const Materias = () => {
         <h1 className="titulo-logo">GABARITA AI</h1>
       </div>
 
-      <div className="container">
+      <div className="container mb-5">
         {/* Faixa Laranja Responsiva */}
         <div className="faixa-container">
           <div className="faixa-laranja">

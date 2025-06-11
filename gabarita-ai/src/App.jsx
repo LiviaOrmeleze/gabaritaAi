@@ -23,7 +23,6 @@ import Significados from "./pages/Significados";
 import Sinonimos from "./pages/Sinonimos";
 import Conectivos from "./pages/Conectivos";
 import Prepositivos from "./pages/Prepositivos";
-
 import Conheca from "./pages/Conheca";
 import Cronograma from "./pages/Cronograma";
 
