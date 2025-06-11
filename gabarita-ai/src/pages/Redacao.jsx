@@ -4,7 +4,7 @@ import logo from "../assets/raposa.png";
 
 const Redacao = () => {
   return (
-    <>
+    
       <div className="d-flex justify-content-center align-items-center min-vh-100  ">
       
 
@@ -125,7 +125,7 @@ const Redacao = () => {
 
         </div>
       </div>
-    </>
+    
   );
 };
 
