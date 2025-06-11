@@ -43,6 +43,25 @@ const Menu = () => {
                 <i class="bi bi-card-checklist"></i> Planos
               </Link>
             </li>
+            <li>
+              <Link to="/desempenho" className="dropdown-item">
+              <i class="bi bi-graph-up"></i>  Meu desempenho
+              </Link>
+            </li><li>
+              <Link to="/disciplinas" className="dropdown-item">
+              <i class="bi bi-clipboard-check"></i> Teste seu nível
+              </Link>
+            </li>
+            <li>
+              <Link to="/cronograma" className="dropdown-item">
+              <i class="bi bi-calendar-week"></i>  Meu cronograma
+              </Link>
+            </li>
+            <li>
+              <Link to="/atualidades" className="dropdown-item">
+              <i class="bi bi-newspaper"></i> Atualidades
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

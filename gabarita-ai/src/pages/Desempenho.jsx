@@ -4,6 +4,7 @@ import "../App.css";
 import quadrado from "../assets/quadrado.png"; // Certifique-se de que o caminho da imagem está correto
 
 import { Chart } from "react-google-charts";
+import NewHeader from "../components/NewHeader";
 
 function Desempenho() {
   const materias = [
@@ -51,6 +52,7 @@ function Desempenho() {
       className="fundo-principal p-4"
       style={{ backgroundColor: "#e7d7c9", minHeight: "100vh" }}
     >
+      <NewHeader/>
       <h1
         className="titulo-principal pb-4"
         style={{ fontFamily: "Open Sans", fontWeight: "bold" }}

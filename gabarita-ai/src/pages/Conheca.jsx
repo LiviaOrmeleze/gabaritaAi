@@ -5,11 +5,16 @@ import logo from "../assets/logo.png";
 import estrela from "../assets/estrela.png";
 import Conhecendo from "../components/Conhecendo";
 import linhatorta from "../assets/linhatorta.png";
+import NewHeader from "../components/NewHeader";
 
 const Conheca = () => {
   return (
-    <div className="fundoconheca body min-vh-100 d-flex align-items-center overflow-hidden">
+    <>
+    <div className="fundoconheca min-vh-100 body d-flex align-items-center overflow-hidden">
+      <div className="fixed-top">
 
+      <NewHeader /> 
+      </div>
 
      <div className="col-12 col-md-6 d-flex justify-content-center position-relative">
       <div className="d-flex align-items-center flex-column ">
@@ -45,6 +50,7 @@ const Conheca = () => {
 
 
     </div>
+</>
   );
 };
 
