@@ -60,8 +60,10 @@ const Planos = () => {
     return () => window.removeEventListener("resize", ajustarLargura);
   }, []);
 
-  const handlePagamento = () => {
-    navigate("/pagamento"); // Redireciona para a página de pagamento
+
+
+  const handleIrParaCartoes = (plano) => {
+    navigate("/cartao", { state: { plano } }); // Passa o plano selecionado para a página de cartões
   };
 
   return (
@@ -188,7 +190,7 @@ const Planos = () => {
                       color: "#fff",
                       borderRadius: "8px",
                     }}
-                    onClick={handlePagamento} // Chama a função de pagamento ao clicar
+                    onClick={() => handleIrParaCartoes(plano)} // Passa o plano selecionado
                   >
                     EXPERIMENTE
                   </button>
@@ -259,7 +261,7 @@ const Planos = () => {
                       color: "#fff",
                       borderRadius: "8px",
                     }}
-                    onClick={handlePagamento} // Chama a função de pagamento ao clicar
+                    onClick={() => handleIrParaCartoes(plano)} // Passa o plano selecionado
                     >
                     EXPERIMENTE
                   </button>

@@ -24,7 +24,10 @@ import Prepositivos from "./pages/Prepositivos";
 
 import Conheca from "./pages/Conheca";
 import Cronograma from "./pages/Cronograma";
-import Pagamento from "./pages/Pagamento";
+
+import Cartao from "./pages/Cartao";
+import FinalizaPagamento from "./pages/FinalizaPagamento";
+import Perfil from "./pages/Perfil";
 
 const App = () => {
   return (
@@ -46,7 +49,9 @@ const App = () => {
           <Route path="/prepositivos" element={<Prepositivos />} />
           <Route path="/conhecanossosite" element={<Conheca />} />
           <Route path="/cronograma" element={<Cronograma />} />
-          <Route path="/pagamento" element={<Pagamento />} />
+          <Route path="/cartao" element={<Cartao />} />
+          <Route path="/finalizar-pagamento" element={<FinalizaPagamento />} />
+          <Route path="/perfil" element={<Perfil />} />
         </Routes>
       </main>
     </BrowserRouter>

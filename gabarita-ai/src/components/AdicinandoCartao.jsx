@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Cartao from "./Cartao";
-import CartaoDeCredito from "./Cartao.jsx";
+
+import CartaoDeCredito from "./CartaoDeCredito"; // Importar o componente CartaoDeCredito
 import "react-credit-cards-2/dist/lib/styles-compiled.css"; // Importando os estilos do react-credit-cards-2
 
 const AdicionandoCartao = () => {
