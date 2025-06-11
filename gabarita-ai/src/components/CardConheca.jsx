@@ -15,7 +15,7 @@ const CardConheca = (props) => {
 
       <div className='position-absolute p-4'>
 
-      <div className='d-flex gap-4 align-items-center'>
+      <div className='d-flex gap-4 align-items-center ms-2'>
       <div className='align-items-center justify-content-center d-flex flex-column'>
       <img 
       src={miniestrelinha}

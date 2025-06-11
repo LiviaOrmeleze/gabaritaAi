@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Cadastro from "./pages/Cadastro";
 import PaginaPrincipal from "./pages/PaginaPrincipal";
@@ -22,12 +22,10 @@ import Significados from "./pages/Significados";
 import Sinonimos from "./pages/Sinonimos";
 import Conectivos from "./pages/Conectivos";
 import Prepositivos from "./pages/Prepositivos";
-
 import Conheca from "./pages/Conheca";
 import Cronograma from "./pages/Cronograma";
 import SimuladorECorrecao from "./pages/SimuladorECorrecao";
 
-// import MateriaEspecifica from "./pages/MateriaEspecifica";
 
 const App = () => {
   return (
