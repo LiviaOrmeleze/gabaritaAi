@@ -14,14 +14,17 @@ const Cadastro = () => {
       password,
     };
     try {
-      const response = await fetch("https://localhost:7061/Users/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          accept: "*/*",
-        },
-        body: JSON.stringify(userData),
-      });
+      const response = await fetch(
+        "https://gabaritaai.somee.com/Users/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            accept: "*/*",
+          },
+          body: JSON.stringify(userData),
+        }
+      );
 
       if (response.ok) {
         // Salva o email no localStorage
@@ -203,7 +206,10 @@ const Cadastro = () => {
             style={{ fontFamily: "'Nunito', sans-serif" }}
           >
             Já tem uma conta?{" "}
-            <Link to="/login" className="text-info fw-bold text-decoration-none">
+            <Link
+              to="/login"
+              className="text-info fw-bold text-decoration-none"
+            >
               Faça login aqui
             </Link>
           </p>

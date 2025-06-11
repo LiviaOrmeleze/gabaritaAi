@@ -14,7 +14,7 @@ const Login = () => {
     setError(""); // Limpa mensagens de erro
 
     try {
-      const response = await fetch("https://localhost:7061/Users/login", {
+      const response = await fetch("https://gabaritaai.somee.com/Users/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -30,9 +30,9 @@ const Login = () => {
         // Armazena o token no localStorage para uso futuro
         localStorage.setItem("authToken", `Bearer ${token}`);
 
-          // Salva o e-mail no localStorage
-          localStorage.setItem("userEmail", email);
-          navigate("/");
+        // Salva o e-mail no localStorage
+        localStorage.setItem("userEmail", email);
+        navigate("/");
       } else {
         const errorData = await response.json();
         setError(errorData.message || "Erro ao realizar login.");
@@ -206,8 +206,11 @@ const Login = () => {
             style={{ fontFamily: "'Nunito', sans-serif" }}
           >
             Não tem uma conta ainda?{" "}
-            <a href="/cadastro" className="text-info fw-bold text-decoration-none">
-            Cadastre-se aqui
+            <a
+              href="/cadastro"
+              className="text-info fw-bold text-decoration-none"
+            >
+              Cadastre-se aqui
             </a>
           </p>
         </div>
