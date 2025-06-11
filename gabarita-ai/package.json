@@ -33,6 +33,7 @@
     "globals": "^15.15.0",
     "react-google-charts": "^5.2.1",
     "sass": "^1.86.1",
+    "typescript": "^5.8.3",
     "vite": "^6.2.0"
   }
 }

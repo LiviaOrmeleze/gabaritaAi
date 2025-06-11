@@ -7,7 +7,7 @@ const MateriaEspecificaOf = (props) => {
     const { nome } = useParams(); // Obtém o nome da matéria da URL
 
     return (
-      <div className="container">
+      <div className="container mb-5">
         <h3 className="mt-5 text-capitalize textocalendario titulo-materia">   Matéria / {nome}</h3>
       <MatematicaStudy />   
       </div>

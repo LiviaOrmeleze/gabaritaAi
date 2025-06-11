@@ -18,21 +18,21 @@ function HeaderCalendario({ mesAtual, onChangeView, visualizacaoAtual, onPreviou
       <div className="btn-group me-5 px-3">
         <button
           type="button"
-          className={`btn ${visualizacaoAtual === "mes" ? "btn-primary" : "btn-secondary"}`}
+          className={`btn ${visualizacaoAtual === "mes" ? "btn-success" : "btn-secondary"}`}
           onClick={() => onChangeView("mes")}
         >
           Mês
         </button>
         <button
           type="button"
-          className={`btn ${visualizacaoAtual === "semana" ? "btn-primary" : "btn-secondary"}`}
+          className={`btn ${visualizacaoAtual === "semana" ? "btn-success" : "btn-secondary"}`}
           onClick={() => onChangeView("semana")}
         >
           Semana
         </button>
         <button
           type="button"
-          className={`btn ${visualizacaoAtual === "dia" ? "btn-primary" : "btn-secondary"}`}
+          className={`btn ${visualizacaoAtual === "dia" ? "btn-success" : "btn-secondary"}`}
           onClick={() => onChangeView("dia")}
         >
           Dia
