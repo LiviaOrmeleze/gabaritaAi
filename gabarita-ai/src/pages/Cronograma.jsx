@@ -44,7 +44,7 @@ const Cronograma = () => {
         onNext={handleNext}
         />
         </div>
-    <div className="container calendario-container py-4 textocalendario min-vh-100 rounded-5">
+    <div className="container calendario-container py-4 textocalendario min-vh-100 rounded-5 align-items-center d-flex flex-column">
       {visualizacao === "mes" && <MesView eventos={eventosEstudo} />}
       {visualizacao === "semana" && <SemanaView eventos={eventosEstudo} />}
       {visualizacao === "dia" && <DiaView eventos={eventosEstudo} />}

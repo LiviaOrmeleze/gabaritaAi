@@ -14,14 +14,17 @@ const Cadastro = () => {
       password,
     };
     try {
-      const response = await fetch("https://localhost:7061/Users/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          accept: "*/*",
-        },
-        body: JSON.stringify(userData),
-      });
+      const response = await fetch(
+        "https://gabaritaai.somee.com/Users/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            accept: "*/*",
+          },
+          body: JSON.stringify(userData),
+        }
+      );
 
       if (response.ok) {
         // Salva o email no localStorage
@@ -137,6 +140,7 @@ const Cadastro = () => {
                 className="form-control"
                 id="contato"
                 value={email}
+                placeholder="Digite seu e-mail"
                 onChange={(e) => setEmail(e.target.value)}
                 style={{
                   borderRadius: "12px",
@@ -167,6 +171,7 @@ const Cadastro = () => {
                 className="form-control"
                 id="senha"
                 value={password}
+                placeholder="Digite sua senha"
                 onChange={(e) => setPassword(e.target.value)}
                 style={{
                   borderRadius: "12px",
@@ -201,7 +206,10 @@ const Cadastro = () => {
             style={{ fontFamily: "'Nunito', sans-serif" }}
           >
             Já tem uma conta?{" "}
-            <Link to="/" className="text-info fw-bold text-decoration-none">
+            <Link
+              to="/login"
+              className="text-info fw-bold text-decoration-none"
+            >
               Faça login aqui
             </Link>
           </p>

@@ -1,20 +1,25 @@
 import React from "react";
 
-import folha from "../assets/folha.png";
+import folha2 from "../assets/folha2.png";
 import logo from "../assets/logo.png";
 import estrela from "../assets/estrela.png";
 import Conhecendo from "../components/Conhecendo";
 import linhatorta from "../assets/linhatorta.png";
+import NewHeader from "../components/NewHeader";
 
 const Conheca = () => {
   return (
-    <div className="fundoconheca body min-vh-100 d-flex align-items-center overflow-hidden">
+    <>
+    <div className="fundoconheca min-vh-100 body d-flex align-items-center overflow-hidden">
+      <div className="fixed-top">
 
+      <NewHeader /> 
+      </div>
 
      <div className="col-12 col-md-6 d-flex justify-content-center position-relative">
       <div className="d-flex align-items-center flex-column ">
 
-        <img className="position-relative" src={folha} alt="" />
+        <img className="position-relative" src={folha2} alt="" />
         <div className="position-absolute py-5 mt-3 ">
           <h1 className="tituloconheca px-5 ms-4 py-3">Conheça nosso site</h1>
         <div className="position-absolute"> 
@@ -38,13 +43,14 @@ const Conheca = () => {
      </div>
 
 
-        <div className="col-12 col-md-6 d-flex justify-content-center">
+        <div className=" col-md-6 col-sm-12 d-flex justify-content-center">
         <Conhecendo />
         </div>
 
 
 
     </div>
+</>
   );
 };
 

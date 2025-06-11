@@ -4,7 +4,6 @@ import "../App.css";
 import { useMateriasController } from "../components/MateriasController";
 
 // Importação das imagens
-import raposa from "../assets/raposa.png";
 import biologia from "../assets/biologia.png";
 import fisica from "../assets/fisica.png";
 import quimica from "../assets/quimica.png";
@@ -17,8 +16,9 @@ import literatura from "../assets/literatura.png";
 import artes from "../assets/artes.png";
 import ingles from "../assets/ingles.png";
 import espanhol from "../assets/espanhol.png";
-import matematica from "../assets/matematica .png"; // Corrigido o espaço no nome do arquivo
+import matematica from "../assets/matematica.png";
 import livros from "../assets/livros.png"; // Imagem de livros
+import NewHeader from "../components/NewHeader";
 
 const Materias = () => {
   const { abrirMateria } = useMateriasController(); // Usando o controller
@@ -48,12 +48,9 @@ const Materias = () => {
   return (
     <>
       {/* Topo */}
-      <div className="topo-container">
-        <img src={raposa} alt="Raposa" className="raposa" />
-        <h1 className="titulo-logo">GABARITA AI</h1>
-      </div>
+      < NewHeader />
 
-      <div className="container">
+      <div className="container mb-5">
         {/* Faixa Laranja Responsiva */}
         <div className="faixa-container">
           <div className="faixa-laranja">
@@ -74,7 +71,7 @@ const Materias = () => {
                 <button
                   key={index}
                   className="materia-btn"
-                  onClick={() => abrirMateria(materia)}
+                  onClick={() => abrirMateria(materia)} // Redireciona para a página da matéria
                 >
                   <img
                     src={materia.imagem}
