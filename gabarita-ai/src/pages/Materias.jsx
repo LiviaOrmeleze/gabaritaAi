@@ -16,7 +16,7 @@ import literatura from "../assets/literatura.png";
 import artes from "../assets/artes.png";
 import ingles from "../assets/ingles.png";
 import espanhol from "../assets/espanhol.png";
-import matematica from "../assets/matematica .png"; // Corrigido o espaço no nome do arquivo
+import matematica from "../assets/matematica.png";
 import livros from "../assets/livros.png"; // Imagem de livros
 import NewHeader from "../components/NewHeader";
 
@@ -50,7 +50,7 @@ const Materias = () => {
       {/* Topo */}
       < NewHeader />
 
-      <div className="container">
+      <div className="container mb-5">
         {/* Faixa Laranja Responsiva */}
         <div className="faixa-container">
           <div className="faixa-laranja">
@@ -71,7 +71,7 @@ const Materias = () => {
                 <button
                   key={index}
                   className="materia-btn"
-                  onClick={() => abrirMateria(materia)}
+                  onClick={() => abrirMateria(materia)} // Redireciona para a página da matéria
                 >
                   <img
                     src={materia.imagem}

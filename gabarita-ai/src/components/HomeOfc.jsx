@@ -19,9 +19,9 @@ const HomeOfc = () => {
 
         <div className="d-flex flex-column ">
           <div className="blocoVesti p-3 text-center fs-5 mb-3 ">
-            Vestibular
+            Vestibulares
           </div>
-          <div className="blocoCon p-3 text-center  fs-5 mb-3">Concurso</div>
+          <div className="blocoCon p-3 text-center  fs-5 mb-3">Notícias</div>
           <div className="blocoAtua p-3 text-center fs-5">Atualidades</div>
         </div>
       </div>

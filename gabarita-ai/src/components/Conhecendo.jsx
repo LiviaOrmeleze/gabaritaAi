@@ -13,6 +13,7 @@ const Conhecendo = () => {
         imagem: caixabranca,
         subtitulo: "Teste seu nível",
         texto: "Para avaliar suas habilidades nas principais disciplinas e identificar os tópicos que precisam de mais atenção. Aqui, você terá uma visão clara do seu desempenho!",
+        link: "/disciplinas",
       },
       {
         id: 2,
@@ -28,6 +29,7 @@ const Conhecendo = () => {
         imagem: caixabege,
         subtitulo: "Meus Desempenhos",
         texto: "Acompanhe sua evolução e veja o quanto você está progredindo! Com nosso gráfico, você pode visualizar seus acertos, pontos de melhoria e ver os pontos necessários para retomada!",
+        link: "/desempenho",
       },
       {
         id: 4,
@@ -50,7 +52,11 @@ const Conhecendo = () => {
       {informacoes.map((info) =>
         info.link ? (
           // Envolver o card com Link se houver um link
-          <Link to={info.link} key={info.id} style={{ textDecoration: "none" }}>
+          <Link
+            to={info.link}
+            key={info.id}
+            style={{ textDecoration: "none", color: "inherit" }} // Remove o sublinhado e herda a cor do elemento pai
+          >
             <CardConheca
               numero={info.numero}
               imagem={info.imagem}

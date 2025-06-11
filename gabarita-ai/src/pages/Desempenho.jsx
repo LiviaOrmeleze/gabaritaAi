@@ -49,7 +49,7 @@ function Desempenho() {
 
   return (
     <div
-      className="fundo-principal p-4"
+      className="fundo-principal p-4 "
       style={{ backgroundColor: "#e7d7c9", minHeight: "100vh" }}
     >
       <NewHeader/>

@@ -43,7 +43,7 @@ const Conheca = () => {
      </div>
 
 
-        <div className="col-12 col-md-6 d-flex justify-content-center">
+        <div className=" col-md-6 col-sm-12 d-flex justify-content-center">
         <Conhecendo />
         </div>
 
