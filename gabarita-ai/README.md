@@ -1,12 +1,50 @@
-# React + Vite
+# 📚 GabaritaAi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**GabaritaAi** é uma plataforma educacional desenvolvida para auxiliar estudantes na preparação para o ENEM e vestibulares, oferecendo ferramentas como simulados, dicionário de significados e análise de desempenho.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+### Frontend
+- **React** com **Vite**
+- **Bootstrap Icons** para os ícones
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Backend
+- **ASP.NET Core**
+- **SQL Server** como banco de dados
+- Documentação e testes via **Swagger / OpenAPI**
+
+---
+
+## 🎯 Principais Funcionalidades
+
+- ✅ Cadastro e login de usuários com autenticação JWT
+- ✅ Dicionário online com busca de significados de palavras
+- ✅ Geração de questões simuladas para estudo
+- ✅ Consulta de desempenho (estatísticas - em desenvolvimento)
+- ✅ Integração completa entre Frontend e Backend
+- ✅ Swagger para testes de API em tempo real
+
+---
+
+## 🛠️ Como Rodar o Projeto Localmente
+
+### Pré-requisitos
+
+- Node.js (versão recomendada: 18.x ou superior)
+- .NET SDK (versão recomendada: .NET 6 ou superior)
+- SQL Server (local ou remoto)
+
+### Frontend (React)
+
+```bash
+# Navegue até a pasta do frontend
+cd gabarita-ai
+
+# Instale as dependências
+npm install
+
+# Rode o projeto
+npm run dev
+
